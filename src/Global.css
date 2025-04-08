@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*boton arriba*/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0e0F11;
+  color: #fff;
+  border: 2px solid #1063ff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+}
+
+*{
+  font-family: 'IBM Plex sans', sans-serif;
+}
