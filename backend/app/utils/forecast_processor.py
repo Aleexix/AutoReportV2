@@ -4,7 +4,7 @@ import os
 import shutil
 import numpy as np
 from openpyxl.utils import get_column_letter, column_index_from_string
-
+pd.set_option('future.no_silent_downcasting', True) 
 
 def procesar_forecast(epm_file_path, forecast_base_path):
     print("📁 Iniciando limpieza del archivo EPM...")
@@ -110,7 +110,7 @@ def procesar_forecast(epm_file_path, forecast_base_path):
     for c_idx, col in enumerate(epm_df.columns):
         col_index = c_idx + 1
         if col_index < max_cols:
-            col_values = epm_df[col].fillna('').values  # evita NaN que generen desfase
+            col_values = epm_df[col].fillna('').infer_objects(copy=False).values # evita NaN que generen desfase
             row_data[:, col_index] = col_values
 
     
@@ -211,11 +211,11 @@ def procesar_forecast(epm_file_path, forecast_base_path):
             forecast_epm_ws.cell(row=r, column=dest_col, value=val)
         # 3. Copiar columnas seleccionadas de EPM a hoja P2
 
-    print("📌 Copiando columnas clave desde hoja 'EPM' a hoja 'P2'...")
+    print("📌 Copiando columnas clave desde hoja 'EPM' a hoja 'Data Trx'...")
 
     try:
         ws_epm_forecast = forecast_wb['EPM']
-        ws_p2 = forecast_wb['P2']
+        ws_DataTrx = forecast_wb['Data Trx']
 
     # 🔧 Primero, llenamos la columna AI (Brand) manualmente en EPM
         def calcular_brand(valor):
@@ -240,44 +240,190 @@ def procesar_forecast(epm_file_path, forecast_base_path):
             ws_epm_forecast.cell(row=row, column=35).value = brand  # Columna AI
         print("✅ Columna AI (Brand) calculada y completada.")
 
+        # 🌎 Definimos la tabla de correspondencia para países
+        tabla_country = {
+            "Colombia": "Colombia",
+            "Costa Rica": "LCR",
+            "Dominican Republic": "LCR",
+            "El Salvador": "LCR",
+            "Guatemala": "LCR",
+            "Honduras": "LCR",
+            "Panama": "LCR",
+            "Venezuela": "Venezuela"
+        }
+
+        def calcular_country(nombre_pais):
+            if nombre_pais is None:
+                return ""
+            nombre_pais_str = str(nombre_pais).strip()
+            return tabla_country.get(nombre_pais_str, "")  # Devuelve "" si no encuentra el país
+
+        # 🔍 Calcular columna AJ (Country) en EPM
+        print("🌎 Calculando valores de la columna AJ (Country) en EPM...")
+        for row in range(4, ws_epm_forecast.max_row + 1):
+            country_name = ws_epm_forecast.cell(row=row, column=8).value  # Columna H (Country Name)
+            resultado = calcular_country(country_name)
+            ws_epm_forecast.cell(row=row, column=36).value = resultado  # Columna AJ (Country)
+        print("✅ Columna AJ (Country) en EPM calculada.")
+
+        def extraer_mes(forecast_month):
+            """
+            Extrae el carácter en la posición 7 (similar a =EXTRAE(texto;7;1) en Excel)
+
+            Args:
+                forecast_month: El valor de la celda Forecast Month
+
+            Returns:
+                El carácter en la posición 7 (índice 6 en Python) o vacío si no existe
+            """
+            if forecast_month is None or not isinstance(forecast_month, str):
+                return ""
+
+            # En Python, los índices empiezan desde 0, así que la posición 7 es el índice 6
+            if len(forecast_month) >= 7:
+                return forecast_month[6:7]  # Extrae 1 carácter desde la posición 7
+            else:
+                return ""
+
+        # Ejemplo de uso en tu código:
+        print("🔍 Extrayendo valores de mes...")
+        for row in range(4, ws_epm_forecast.max_row + 1):
+            forecast_month = ws_epm_forecast.cell(row=row, column=6).value  
+            mes = extraer_mes(forecast_month)
+            ws_epm_forecast.cell(row=row, column=44).value = mes
+
+        def calcular_estado(rdmp, isc_sales_stage_name):
+            """
+            Implementa la fórmula:
+            =SI.ERROR(SI(Y(Data_ISC[@RDMP]="Call";Data_ISC[@[ISC Sales Stage Name]]<>"Won");"At Risk";
+                        SI(Data_ISC[@[ISC Sales Stage Name]]="Won";"Won";
+                        SI(Data_ISC[@RDMP]="Upside";"Key Stretch";"Stretch")));"")
+    
+            Args:
+                rdmp: Valor de la columna RDMP
+                isc_sales_stage_name: Valor de la columna ISC Sales Stage Name
+    
+            Returns:
+                El resultado calculado según la fórmula
+         """
+            try:
+            # Primera condición: Si RDMP es "Call" y ISC Sales Stage Name no es "Won"
+                if rdmp == "Call" and isc_sales_stage_name != "Won":
+                    return "At Risk"
+                # Segunda condición: Si ISC Sales Stage Name es "Won"
+                elif isc_sales_stage_name == "Won":
+                    return "Won"
+                # Tercera condición: Si RDMP es "Upside"
+                elif rdmp == "Upside":
+                    return "Key Stretch"
+                # Caso predeterminado
+                else:
+                    return "Stretch"
+            except Exception:
+                # Manejo de cualquier error (equivalente a SI.ERROR)
+                return ""
+
+        # Ejemplo de uso en tu código:
+        print("🔍 Calculando estado según RDMP y ISC Sales Stage...")
+        for row in range(4, ws_epm_forecast.max_row + 1):
+            rdmp = ws_epm_forecast.cell(row=row, column=41).value  # Reemplaza X con el número de columna RDMP
+            isc_stage = ws_epm_forecast.cell(row=row, column=7).value  # Reemplaza Y con el número de columna ISC Sales Stage Name
+    
+            estado = calcular_estado(rdmp, isc_stage)
+            ws_epm_forecast.cell(row=row, column=43).value = estado  # Reemplaza Z con la columna destino
+        print("✅ Cálculo de estado completado.")  
+
+        def copiar_sum_of_oppty_value(ws, fila_origen, columna_origen, fila_destino, columna_destino):
+            """
+            Copia el valor de Sum of Oppty Value a otra celda
+    
+            Args:
+                ws: Hoja de trabajo (worksheet)
+                fila_origen: Número de fila donde leer el valor
+                columna_origen: Número de columna donde está "Sum of Oppty Value"
+                fila_destino: Número de fila donde escribir el valor
+                columna_destino: Número de columna donde escribir el valor
+            """
+            valor = ws.cell(row=fila_origen, column=columna_origen).value
+            ws.cell(row=fila_destino, column=columna_destino).value = valor
+
+        # Ejemplo de uso:
+        print("🔍 Copiando valores de Sum of Oppty Value...")
+        columna_sum_of_oppty = 30  # Reemplaza X con el número de columna donde está "Sum of Oppty Value"
+        columna_destino = 33  # Reemplaza Y con el número de columna donde quieres guardar el resultado
+
+        for row in range(4, ws_epm_forecast.max_row + 1):
+            # Copiar el valor de la misma fila
+            copiar_sum_of_oppty_value(
+                ws_epm_forecast, 
+                fila_origen=row, 
+                columna_origen=columna_sum_of_oppty,
+                fila_destino=row, 
+                columna_destino=columna_destino
+            )
+        print("✅ Valores de Sum of Oppty Value copiados.")
+
+
     # 📥 Luego copiamos las columnas a P2
         columnas_mapeo = {
-            'AI': 'B',
-            'AJ': 'C',
-            'C': 'D',
-            'N': 'E',
-            'B': 'F',
-            'D': 'G',
-            'AR': 'H',
-            'E': 'I',
-            'S': 'J',
-            'AQ': 'K',
-            'AG': 'L'
+            'AI': 'A',
+            'AJ': 'B',
+            'C': 'C',
+            'N': 'D',
+            'B': 'E',
+            'D': 'F',
+            'AR': 'G',
+            'E': 'H',
+            'S': 'I',
+            'AQ': 'J',
+            'AG': 'K'
         }
 
         start_row_epm = 4  # desde fila 4 en EPM
-        start_row_p2 = 4   # fila 3 en P2
+        start_row_DataTrx = 4   # fila 3 en Data Trx
         max_row = ws_epm_forecast.max_row
         
-
-        for epm_col, p2_col in columnas_mapeo.items():
+        
+        for epm_col, DataTrx_col in columnas_mapeo.items():
             col_idx_epm = column_index_from_string(epm_col)
-            col_idx_p2 = column_index_from_string(p2_col)
+            col_idx_DataTrx = column_index_from_string(DataTrx_col)
 
-            print(f"  🔄 Copiando columna {epm_col} ➜ {p2_col}")
+            print(f"  🔄 Copiando columna {epm_col} ➜ {DataTrx_col}")
             for i in range(start_row_epm, max_row + 1):
                 value = ws_epm_forecast.cell(row=i, column=col_idx_epm).value
-                target_row = start_row_p2 + (i - start_row_epm)
-                ws_p2.cell(row=target_row, column=col_idx_p2, value=value)
+                target_row = start_row_DataTrx + (i - start_row_epm)
+                ws_DataTrx.cell(row=target_row, column=col_idx_DataTrx, value=value)
 
         print("✅ Columnas copiadas correctamente de EPM a P2.")
 
     except Exception as e:
         print(f"❌ Error al copiar datos de EPM a P2: {e}")
 
+
 # 💾 Guardar con extensión xlsm
     forecast_wb.save(forecast_temp_path)
     print(f"✅ Forecast temporal actualizado con todas las filas de datos: {forecast_temp_path}")
 
-    
+    if os.path.exists(output_path):
+        os.remove(output_path)
+        print(f"🗑️ Eliminado: {output_path}")
+
+    if os.path.exists(temp_copy_path):
+        os.remove(temp_copy_path)
+        print(f"🗑️ Eliminado: {temp_copy_path}")
+
+        # Paso 8: Limpiar la carpeta temporal
+    temp_dir = 'temp' 
+    print("🧹 Limpiando la carpeta temporal...")
+    try:    
+        for filename in os.listdir(temp_dir):
+            file_path = os.path.join(temp_dir, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"🗑️ Eliminado archivo: {file_path}")
+        print("✅ Todos los archivos de la carpeta 'temp' han sido eliminados.")
+    except Exception as e:
+        print(f"⚠️ Error al eliminar archivos de la carpeta 'temp': {e}")
+
+
     return forecast_temp_path
