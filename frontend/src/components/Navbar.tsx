@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                     ))}
                   </ul>
                 </nav>
-                <div className="w-auto hidden lg:block">
+                <div className=" w-auto hidden lg:block">
                   <div className="flex items-center">
                     <Link
                       className={`inline-block px-6 py-3 md:px-8 md:py-4 ${darkMode ? 'text-white' : 'text-black'} hover:text-black tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300`}

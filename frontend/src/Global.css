@@ -19,6 +19,7 @@
   transition: opacity 1s ease;
 }
 
+
 .scroll-to-top.visible {
   opacity: 1;
 }

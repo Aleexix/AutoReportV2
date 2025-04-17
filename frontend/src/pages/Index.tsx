@@ -3,6 +3,8 @@ import "../Global.css";
 import React, { useContext } from "react";
 import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext } from "../context/LanguageProvider";
+import { toast } from "react-toastify";
+import ModalComponent from "../components/ModalComponent";
 
 const Index: React.FC = () => {
   const themeContext = useContext(ThemeContext);
@@ -23,13 +25,64 @@ const Index: React.FC = () => {
     }
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("handleFileChange llamado"); // Agrega esto para depurar
     const files = event.target.files;
     if (files && files.length > 0) {
-      console.log('Archivo seleccionado:', files[0]);
-      // Aquí puedes manejar el archivo como desees
+      const file = files[0];
+      console.log('✅ Archivo seleccionado:', file.name);
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      // 🚨 MOSTRAR TOAST DE CARGANDO INMEDIATAMENTE
+      console.log("Mostrando toast de carga...");
+      const loadingToast = toast.loading(languageContext.language === 'es' ? "Procesando archivo..." : "Processing file...");
+
+      try {
+        const response = await fetch('http://localhost:5000/upload-epm', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error('❌ Error desde el backend:', errorData.error);
+          toast.update(loadingToast, {
+            render: languageContext.language === 'es' ? `Error: ${errorData.error}` : `Error: ${errorData.error}`,
+            type: "error",
+            isLoading: false,
+            autoClose: 5000
+          });
+          return;
+        }
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Systems HW - North SSA EPM ISC.xlsm';
+        a.click();
+
+        // ✅ ACTUALIZAR TOAST A ÉXITO
+        toast.update(loadingToast, {
+          render: languageContext.language === 'es' ? "Descarga finalizada" : " Download completed",
+          type: "success",
+          isLoading: false,
+          autoClose: 4000
+        });
+
+        console.log('✅ Archivo descargado correctamente');
+      } catch (error) {
+        console.error('❌ Error al enviar el archivo:', error);
+        toast.update(loadingToast, {
+          render: languageContext.language === 'es' ? "Error al enviar el archivo" : "Error uploading file",
+          type: "error",
+          isLoading: false,
+          autoClose: 5000
+        });
+      }
     }
-  }; // Aquí se cierra la función correctamente
+  };
 
   const { darkMode } = themeContext;
   const { language } = languageContext;
@@ -59,14 +112,14 @@ const Index: React.FC = () => {
                 `}>
                   {language === 'es' ? 'Descarga hoy tu reporte semanal' : 'Download your weekly report today'}
                 </h2>
-                <div className="flex justify-start">
+                <div className="flex justify-start items-center space-x-3">
                   <input
                     type="file"
                     ref={fileInputRef}
                     onChange={handleFileChange}
                     style={{ display: 'none' }} // Ocultar el input
                   />
-                  <button 
+                  <button
                     onClick={handleButtonClick}
                     className="
                       flex items-center 
@@ -88,7 +141,9 @@ const Index: React.FC = () => {
                     </svg>
                     <span>{language === 'es' ? 'Ingresa Archivo EPM' : 'Enter EPM file'}</span>
                   </button>
+                  <ModalComponent />
                 </div>
+
               </div>
             </div>
 
@@ -101,7 +156,7 @@ const Index: React.FC = () => {
               `}>
                 {language === 'es' ? 'Descarga hoy tu reporte semanal' : 'Download your weekly report today'}
               </h2>
-              
+
               <div className="w-full max-w-md">
                 <img
                   className="rounded-3xl animate-float w-full h-auto"
@@ -139,16 +194,16 @@ const Index: React.FC = () => {
         </div>
 
         {/* Background decorations remain the same */}
-        <img 
-          className="absolute bottom-0 right-0 w-1/2 md:w-auto" 
-          src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/Images/Group 1.svg'}`} 
-          alt="" 
+        <img
+          className="absolute bottom-0 right-0 w-1/2 md:w-auto"
+          src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/Images/Group 1.svg'}`}
+          alt=""
         />
         <img className="hidden md:block absolute top-24 right-32 z-10 w-12 h-16 object-contain" src="src/assets/Images/star.svg" alt="" />
-      <img className="hidden md:block absolute top-56 right-32 z-10 w-26 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
+        <img className="hidden md:block absolute top-56 right-32 z-10 w-26 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
 
       </div>
-      
+
       {/* Recent Reports Section - Improved Mobile Responsiveness */}
       <section className={`pt-16 pb-16 ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto">
@@ -172,8 +227,8 @@ const Index: React.FC = () => {
               mx-auto 
               ${darkMode ? 'text-gray-300' : 'text-gray-800'}
             `}>
-              {language === 'es' 
-                ? 'Aquí se generarán los reportes más recientes de los días Lunes y viernes.' 
+              {language === 'es'
+                ? 'Aquí se generarán los reportes más recientes de los días Lunes y viernes.'
                 : 'Here are the most recent reports of Monday and Friday.'}
             </p>
           </div>
@@ -181,8 +236,8 @@ const Index: React.FC = () => {
           {/* Reports Grid - More Responsive and Touch-Friendly */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {[1, 2, 3].map((_, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`
                   relative 
                   flex flex-col 
@@ -193,8 +248,8 @@ const Index: React.FC = () => {
                   bg-white 
                   border 
                   border-black 
-                  ${darkMode 
-                    ? 'shadow-lg hover:shadow-gray-500 hover:shadow-2xl' 
+                  ${darkMode
+                    ? 'shadow-lg hover:shadow-gray-500 hover:shadow-2xl'
                     : 'shadow-lg hover:shadow-2xl hover:shadow-black'}
                   transition-all 
                   duration-300 
@@ -204,20 +259,20 @@ const Index: React.FC = () => {
               >
                 <div className="h-full w-full p-6">
                   <div className="relative w-full">
-                    <img 
-                      src="src/assets/Images/opcion3.jpg" 
-                      className="mb-4 w-full rounded-xl object-cover aspect-video" 
-                      alt="Report Preview" 
+                    <img
+                      src="src/assets/Images/opcion3.jpg"
+                      className="mb-4 w-full rounded-xl object-cover aspect-video"
+                      alt="Report Preview"
                     />
                     <div className="absolute top-4 right-4 flex items-center justify-center rounded-full bg-blueO p-2">
                       <div className="flex h-full w-20 items-center justify-center rounded-full font-medium text-white text-base">
-                        {index % 2 === 0 
-                          ? (language === 'es' ? 'Lunes' : 'Monday') 
+                        {index % 2 === 0
+                          ? (language === 'es' ? 'Lunes' : 'Monday')
                           : (language === 'es' ? 'Viernes' : 'Friday ')}
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between mt-4">
                     <div>
                       <p className="text-xl font-bold text-black">FORECAST</p>

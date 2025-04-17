@@ -10,6 +10,7 @@ import ContactUs from "./pages/Contact us";
 import ScrollToTop from './components/ScrollTop';
 import { ThemeProvider } from "./context/Themecontext";
 import { LanguageProvider } from "./context/LanguageProvider";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -29,6 +30,17 @@ function App() {
       <ScrollToTop />
       <Maintenance />
       <Footer />
+      <ToastContainer 
+            position="top-right" 
+            autoClose={5000} 
+            hideProgressBar={false}
+            newestOnTop={false} 
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
       </LanguageProvider>
       </ThemeProvider>
     </Router>
