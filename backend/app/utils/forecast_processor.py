@@ -6,7 +6,8 @@ import numpy as np
 from openpyxl.utils import get_column_letter, column_index_from_string
 pd.set_option('future.no_silent_downcasting', True) 
 
-def procesar_forecast(epm_file_path, forecast_base_path):
+def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
+    print(f"¿Es reporte de viernes? {is_friday_report}")
     print("📁 Iniciando limpieza del archivo EPM...")
     # Paso 1: Leer archivo EPM
     try:

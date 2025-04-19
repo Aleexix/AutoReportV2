@@ -31,9 +31,12 @@ def upload_epm():
 
     forecast_base_path = os.path.join(base_dir, 'data', 'forecast_base.xlsx')
 
+    is_friday_report = request.form.get('isFridayReport', 'false').lower() == 'true' 
+    print(f"¿Es reporte de viernes? {is_friday_report}")  # Convertir a booleano
+
 
     try:
-        resultado_path = procesar_forecast(upload_path, forecast_base_path)
+        resultado_path = procesar_forecast(upload_path, forecast_base_path, is_friday_report)
         return send_file(resultado_path, as_attachment=True)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
