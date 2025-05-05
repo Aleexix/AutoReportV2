@@ -1,3 +1,4 @@
+from datetime import datetime
 import pandas as pd
 import openpyxl
 import os
@@ -6,8 +7,7 @@ import numpy as np
 from openpyxl.utils import get_column_letter, column_index_from_string
 pd.set_option('future.no_silent_downcasting', True) 
 
-def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
-    print(f"¿Es reporte de viernes? {is_friday_report}")
+def procesar_forecast( epm_file_path, forecast_base_path):
     print("📁 Iniciando limpieza del archivo EPM...")
     # Paso 1: Leer archivo EPM
     try:
@@ -210,7 +210,7 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
             val = ws_pivot.cell(row=r, column=src_col).value
             # Copiamos incluso valores nulos para mantener la estructura
             forecast_epm_ws.cell(row=r, column=dest_col, value=val)
-        # 3. Copiar columnas seleccionadas de EPM a hoja P2
+        # 3. Copiar columnas seleccionadas de EPM a hoja Data Trx 
 
     print("📌 Copiando columnas clave desde hoja 'EPM' a hoja 'Data Trx'...")
 
@@ -218,7 +218,7 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
         ws_epm_forecast = forecast_wb['EPM']
         ws_DataTrx = forecast_wb['Data Trx']
 
-    # 🔧 Primero, llenamos la columna AI (Brand) manualmente en EPM
+    # Primero, llenamos la columna AI (Brand) manualmente en EPM
         def calcular_brand(valor):
             if valor == "Storage HW":
              return "Storage HW"
@@ -241,13 +241,14 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
             ws_epm_forecast.cell(row=row, column=35).value = brand  # Columna AI
         print("✅ Columna AI (Brand) calculada y completada.")
 
-        # 🌎 Definimos la tabla de correspondencia para países
+        # Definimos la tabla de correspondencia para países
         tabla_country = {
             "Colombia": "Colombia",
             "Costa Rica": "LCR",
             "Dominican Republic": "LCR",
             "El Salvador": "LCR",
             "Guatemala": "LCR",
+            "Nicaragua": "LCR",
             "Honduras": "LCR",
             "Panama": "LCR",
             "Venezuela": "Venezuela"
@@ -293,6 +294,33 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
             mes = extraer_mes(forecast_month)
             ws_epm_forecast.cell(row=row, column=44).value = mes
 
+        def calcular_etiqueta(fila):
+            try:
+                if fila ['Sum of Call'] != 0:
+                    return "Call"
+                elif fila['Sum of Upside'] != 0:
+                    return "Upside"
+                else:
+                    return "Stretch"
+            except Exception:
+                return ""
+
+        print("🔍 Calculando etiqueta (Call, Upside, Stretch)...")
+        for row in range(4, ws_epm_forecast.max_row + 1):
+            sum_call = ws_epm_forecast.cell(row=row, column=27).value  # columna 'Sum of Call'
+            sum_upside = ws_epm_forecast.cell(row=row, column=29).value  # columna 'Sum of Upside'
+
+             #Creamos un "diccionario" con los datos esperados por la función
+            fila = {
+                'Sum of Call': sum_call or 0,       # En caso de que venga None, usamos 0
+                'Sum of Upside': sum_upside or 0
+            }
+
+            etiqueta = calcular_etiqueta(fila)
+            ws_epm_forecast.cell(row=row, column=41).value = etiqueta  # columna donde escribimos la etiqueta
+
+
+
         def calcular_estado(rdmp, isc_sales_stage_name):
             """
             Implementa la fórmula:
@@ -323,16 +351,17 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
             except Exception:
                 # Manejo de cualquier error (equivalente a SI.ERROR)
                 return ""
+    
 
         # Ejemplo de uso en tu código:
         print("🔍 Calculando estado según RDMP y ISC Sales Stage...")
         for row in range(4, ws_epm_forecast.max_row + 1):
-            rdmp = ws_epm_forecast.cell(row=row, column=41).value  # Reemplaza X con el número de columna RDMP
-            isc_stage = ws_epm_forecast.cell(row=row, column=7).value  # Reemplaza Y con el número de columna ISC Sales Stage Name
+            rdmp = ws_epm_forecast.cell(row=row, column=41).value  
+            isc_stage = ws_epm_forecast.cell(row=row, column=7).value
     
             estado = calcular_estado(rdmp, isc_stage)
-            ws_epm_forecast.cell(row=row, column=43).value = estado  # Reemplaza Z con la columna destino
-        print("✅ Cálculo de estado completado.")  
+            ws_epm_forecast.cell(row=row, column=43).value = estado  
+
 
         def copiar_sum_of_oppty_value(ws, fila_origen, columna_origen, fila_destino, columna_destino):
             """
@@ -364,8 +393,7 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
             )
         print("✅ Valores de Sum of Oppty Value copiados.")
 
-
-    # 📥 Luego copiamos las columnas a P2
+    # 📥 Luego copiamos las columnas a Data Trx
         columnas_mapeo = {
             'AI': 'A',
             'AJ': 'B',
@@ -399,8 +427,6 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
 
     except Exception as e:
         print(f"❌ Error al copiar datos de EPM a P2: {e}")
-
-
 # 💾 Guardar con extensión xlsm
     forecast_wb.save(forecast_temp_path)
     print(f"✅ Forecast temporal actualizado con todas las filas de datos: {forecast_temp_path}")
@@ -425,6 +451,4 @@ def procesar_forecast(epm_file_path, forecast_base_path, is_friday_report):
         print("✅ Todos los archivos de la carpeta 'temp' han sido eliminados.")
     except Exception as e:
         print(f"⚠️ Error al eliminar archivos de la carpeta 'temp': {e}")
-
-
     return forecast_temp_path

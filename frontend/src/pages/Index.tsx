@@ -4,143 +4,119 @@ import React, { useContext } from "react";
 import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext } from "../context/LanguageProvider";
 import { toast } from "react-toastify";
+
 import ModalComponent from "../components/ModalComponent";
 
 const Index: React.FC = () => {
   const themeContext = useContext(ThemeContext);
   const languageContext = useContext(LanguageContext);
-
+  
   if (!themeContext) {
     throw new Error("Index debe estar dentro de un ThemeProvider");
   }
   if (!languageContext) {
     throw new Error("Index debe estar dentro de un LanguageProvider");
   }
-
-  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
-
-  const handleButtonClick = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click(); // Solo llamar a click si no es null
-    }
-  };
-
-  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("handleFileChange llamado"); // Agrega esto para depurar
-    const files = event.target.files;
-    if (files && files.length > 0) {
-      const file = files[0];
-      console.log('✅ Archivo seleccionado:', file.name);
-
-      const formData = new FormData();
-      formData.append('file', file);
-
-      // 🚨 MOSTRAR TOAST DE CARGANDO INMEDIATAMENTE
-      console.log("Mostrando toast de carga...");
-      const loadingToast = toast.loading(languageContext.language === 'es' ? "Procesando archivo..." : "Processing file...");
-
-      try {
-        const response = await fetch('http://localhost:5000/upload-epm', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!response.ok) {
-          const errorData = await response.json();
-          console.error('❌ Error desde el backend:', errorData.error);
-          toast.update(loadingToast, {
-            render: languageContext.language === 'es' ? `Error: ${errorData.error}` : `Error: ${errorData.error}`,
-            type: "error",
-            isLoading: false,
-            autoClose: 5000
-          });
-          return;
-        }
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Systems HW - North SSA EPM ISC.xlsm';
-        a.click();
-
-        // ✅ ACTUALIZAR TOAST A ÉXITO
-        toast.update(loadingToast, {
-          render: languageContext.language === 'es' ? "Descarga finalizada" : " Download completed",
-          type: "success",
-          isLoading: false,
-          autoClose: 4000
-        });
-
-        console.log('✅ Archivo descargado correctamente');
-      } catch (error) {
-        console.error('❌ Error al enviar el archivo:', error);
-        toast.update(loadingToast, {
-          render: languageContext.language === 'es' ? "Error al enviar el archivo" : "Error uploading file",
-          type: "error",
-          isLoading: false,
-          autoClose: 5000
-        });
-      }
-    }
-  };
-
+  
   const { darkMode } = themeContext;
   const { language } = languageContext;
+  
+  // ⚡ Nueva función para procesar sin subir archivo
+  const handleButtonClick = async () => {
+    const loadingToast = toast.loading(language === 'es' ? "Procesando archivo..." : "Processing file...");
+  
+    try {
+      const response = await fetch('http://localhost:5000/run-process', {
+        method: 'POST',
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        toast.update(loadingToast, {
+          render: language === 'es' ? `Error: ${errorData.error}` : `Error: ${errorData.error}`,
+          type: "error",
+          isLoading: false,
+          autoClose: 5000,
+        });
+        return;
+      }
+  
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Systems HW - North SSA EPM ISC.xlsm';
+      a.click();
+  
+      toast.update(loadingToast, {
+        render: language === 'es' ? "Descarga finalizada" : "Download completed",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+      });
+  
+    } catch (error) {
+      toast.update(loadingToast, {
+        render: language === 'es' ? "Error en el servidor" : "Server error",
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+      });
+    }
+  };
 
   return (
     <>
       <div className={`relative pb-10 md:pb-5 ${darkMode ? 'bg-body' : 'bg-white'}`}>
-        <div className="relative z-10 container px-4 mx-auto">
-          <div className="max-w-5xl mx-auto">
-            {/* Diseño Desktop Normal */}
-            <div className="hidden md:flex flex-row items-center -m-4">
-              <div className="w-1/2 p-4 order-1">
-                <div className="p-8">
-                  <img
-                    className="rounded-3xl animate-float w-full h-auto"
-                    src="src/assets/Images/freepik__background__34186.png"
-                    alt="Dashboard Preview"
-                  />
-                </div>
+      <div className="relative z-10 container px-4 mx-auto">
+        <div className="max-w-5xl mx-auto">
+          {/* Diseño Desktop Normal */}
+          <div className="hidden md:flex flex-row items-center -m-4">
+            <div className="w-1/2 p-4 order-1">
+              <div className="p-8">
+                <img
+                  className="rounded-3xl animate-float w-full h-auto"
+                  src="src/assets/Images/freepik__background__34186.png"
+                  alt="Dashboard Preview"
+                />
               </div>
+            </div>
 
-              <div className="w-1/2 p-4 order-2 space-y-6">
-                <h2 className={`
-                  text-6xl 
-                  tracking-tighter text-left 
-                  ${darkMode ? 'text-white' : 'text-black'}
-                `}>
-                  {language === 'es' ? 'Descarga hoy tu reporte semanal' : 'Download your weekly report today'}
-                </h2>
-                <div className="flex justify-start items-center space-x-3">
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    onChange={handleFileChange}
-                    style={{ display: 'none' }} // Ocultar el input
-                  />
-                  <button
-                    onClick={handleButtonClick}
-                    className="
-                      flex items-center 
-                      px-8 py-4 
-                      text-lg 
-                      text-black 
-                      font-medium 
-                      tracking-tighter 
-                      bg-blueI 
-                      hover:bg-blue-700 
-                      border-2 border-blueI 
-                      focus:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 
-                      rounded-full 
-                      transition-transform duration-300 
-                      transform hover:scale-105
-                    ">
-                    <svg className="fill-current w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-                    </svg>
-                    <span>{language === 'es' ? 'Ingresa Archivo EPM' : 'Enter EPM file'}</span>
-                  </button>
+            <div className="w-1/2 p-4 order-2 space-y-6">
+              <h2 className={`
+                text-6xl 
+                tracking-tighter text-left 
+                ${darkMode ? 'text-white' : 'text-black'}
+              `}>
+                {language === 'es' ? 'Descarga hoy tu reporte semanal' : 'Download your weekly report today'}
+              </h2>
+
+              <div className="flex justify-start items-center space-x-3">
+                {/* 👇 Solo el botón, sin input */}
+                <button
+                  onClick={handleButtonClick}
+                  className="
+                    flex items-center 
+                    px-8 py-4 
+                    text-lg 
+                    text-black 
+                    font-medium 
+                    tracking-tighter 
+                    bg-blueI 
+                    hover:bg-blue-700 
+                    border-2 border-blueI 
+                    focus:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 
+                    rounded-full 
+                    transition-transform duration-300 
+                    transform hover:scale-105
+                  "
+                >
+                   <svg className="fill-current w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                  </svg>
+                  <span>{language === 'es' ? 'Procesar Forecast' : 'Process Forecast'}</span>
+                </button>
+
                   <ModalComponent />
                 </div>
 
