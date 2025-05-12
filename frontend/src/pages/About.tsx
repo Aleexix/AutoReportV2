@@ -6,6 +6,7 @@ const About = () => {
     const themeContext = useContext(ThemeContext);
     const languageContext = useContext(LanguageContext);
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpandedDocs, setIsExpandedDocs] = useState(false);
 
     if (!themeContext) {
         throw new Error("Index debe estar dentro de un ThemeProvider");
@@ -22,6 +23,10 @@ const About = () => {
         setIsExpanded(!isExpanded);
     };
 
+    const toggleReadMoreDocs = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        setIsExpandedDocs(!isExpandedDocs);
+    };
     return (
         <>
             <section className={`pt-20 overflow-hidden ${darkMode ? 'bg-body' : 'bg-white'}`}>
@@ -121,11 +126,11 @@ const About = () => {
                                 </p>
 
                                 {/* Lógica de expandir/contraer texto */}
-                                {!isExpanded ? (
+                                {!isExpandedDocs ? (
                                     <a
                                         className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
                                         href="#"
-                                        onClick={toggleReadMore}
+                                        onClick={toggleReadMoreDocs}
                                     >
                                         {language === 'es' ? 'Leer mas' : 'Read the rest'}
                                     </a>
@@ -137,7 +142,7 @@ const About = () => {
                                         <a
                                             className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
                                             href="#"
-                                            onClick={toggleReadMore}
+                                            onClick={toggleReadMoreDocs}
                                         >
                                             {language === 'es' ? 'Leer menos' : 'Read less'}
                                         </a>

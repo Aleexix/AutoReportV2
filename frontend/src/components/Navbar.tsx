@@ -30,14 +30,6 @@ const Navbar: React.FC = () => {
     { 
       to: "/contactanos", 
       label: { es: 'Ayuda', en: 'Help' } 
-    },
-    {
-      to: "#",
-      label: { es: 'Grafica', en: 'Graph' }
-    },
-    { 
-      to: "/semanal", 
-      label: { es: 'Histórico', en: 'History' } 
     }
     
   ];

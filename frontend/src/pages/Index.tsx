@@ -5,8 +5,6 @@ import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext } from "../context/LanguageProvider";
 import { toast } from "react-toastify";
 
-import ModalComponent from "../components/ModalComponent";
-
 const Index: React.FC = () => {
   const themeContext = useContext(ThemeContext);
   const languageContext = useContext(LanguageContext);
@@ -116,8 +114,6 @@ const Index: React.FC = () => {
                   </svg>
                   <span>{language === 'es' ? 'Procesar Forecast' : 'Process Forecast'}</span>
                 </button>
-
-                  <ModalComponent />
                 </div>
 
               </div>
