@@ -31,7 +31,6 @@ const Footer = () => {
                     <ul className={`flex justify-center space-x-8 ${darkMode ? 'text-black ': 'text-white'}`} >
                         <li className="hover:text-blueI"><a href="/contactanos">{language === 'es' ? 'Ayuda':'Help'}</a></li>
                         <li className="hover:text-blueI"><a href="/sobre nosotros">{language === 'es' ? 'Nosotros':'About'}</a></li>
-                        <li className="hover:text-blueI"><a href="/semanal">{language === 'es' ? 'Historico':'Historic'}</a></li>
                         <li className="hover:text-blueI"><a href="/">{language === 'es' ? 'Tu reporte':'your report'}</a></li>
                     </ul>
                 </div>
