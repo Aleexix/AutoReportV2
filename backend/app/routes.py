@@ -293,7 +293,7 @@ def run_process():
 
         time.sleep(30) # Esperar a que se cargue el contenido
 
-        # Hacer clic en el botón de exportar
+        # Hacer clic en el botón Finalizar
         WebDriverWait(driver, 50).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="v8982"]'))
         ).click()
@@ -302,11 +302,11 @@ def run_process():
 
         WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="AppToolbarLeftPane_btnFormats"]'))
-        ).click()
+        ).click()#Clic a bton Html
         time.sleep(5)  # Esperar a que se cargue el contenido
         WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="mnuAppToolbarLeftPaneFormats_spreadsheetML"]/tbody/tr/td[2]'))
-        ).click()
+        ).click()#Clic a bton Excel
 
         # Verifica que la descarga haya comenzado
         time.sleep(100)  # Espera corta para que comience la descarga
