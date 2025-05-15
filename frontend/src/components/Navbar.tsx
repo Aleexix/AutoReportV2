@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext, LanguageToggle } from "../context/LanguageProvider";
@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const themeContext = useContext(ThemeContext);
   const languageContext = useContext(LanguageContext);
+  const location = useLocation();
 
   if (!themeContext) {
     throw new Error("Navbar debe estar dentro de un ThemeProvider");
@@ -22,17 +23,21 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   const navLinks = [
     { 
-      to: "/sobre nosotros", 
+      to: "/sobrenosotros", 
       label: { es: 'Nosotros', en: 'About us' } 
     },
     { 
       to: "/contactanos", 
       label: { es: 'Ayuda', en: 'Help' } 
     }
-    
   ];
+  
 
   return (
     <div className={`${darkMode ? 'bg-body' : 'bg-white'} w-full`}>
@@ -60,20 +65,28 @@ const Navbar: React.FC = () => {
               <div className="flex flex-wrap items-center">
                 <nav className="w-auto hidden lg:block">
                   <ul className="flex items-center mr-4 md:mr-8 lg:mr-12">
-                    {navLinks.map((link) => (
-                      <li 
-                        key={link.to} 
-                        className={`mr-6 md:mr-8 lg:mr-12 ${darkMode ? 'text-white' : 'text-black'} font-medium hover:text-opacity-90 tracking-tighter`}
-                      >
-                        <Link to={link.to}>{link.label[language]}</Link>
-                      </li>
-                    ))}
+                      {navLinks.map((link) => (
+                        <li 
+                          key={link.to} 
+                          className={`mr-6 md:mr-8 lg:mr-12 ${
+                            darkMode ? 'text-white' : 'text-black'
+                          } font-medium hover:text-opacity-90 tracking-tighter ${
+                            isActive(link.to) ? 'border-b-2 border-blueI' : ''
+                          }`}
+                        >
+                          <Link to={link.to}>{link.label[language]}</Link>
+                        </li>
+                      ))}
                   </ul>
                 </nav>
                 <div className=" w-auto hidden lg:block">
                   <div className="flex items-center">
                     <Link
-                      className={`inline-block px-6 py-3 md:px-8 md:py-4 ${darkMode ? 'text-white' : 'text-black'} hover:text-black tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300`}
+                      className={`inline-block px-6 py-3 md:px-8 md:py-4 ${
+                        darkMode ? 'text-white' : 'text-black'
+                      } hover:text-black tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300 ${
+                        isActive("/") ? 'bg-blueI text-white' : ''
+                      }`}
                       to="/"
                     >
                       {language === 'es' ? 'Tu reporte' : 'Your report'}
@@ -88,7 +101,6 @@ const Navbar: React.FC = () => {
                         aria-label={language === 'es' ? 'Cambiar tema' : 'Toggle theme'}
                       >
                         {darkMode ? (
-                          // Sun icon (Dark mode)
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -111,7 +123,6 @@ const Navbar: React.FC = () => {
                             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                           </svg>
                         ) : (
-                          // Moon icon (Light mode)
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -222,7 +233,11 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`block px-4 py-3 text-lg font-medium ${darkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'} rounded-md`}
+                  className={`block px-4 py-3 text-lg font-medium ${
+                    darkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'
+                  } rounded-md ${
+                    isActive(link.to) ? 'bg-blueI text-white' : ''
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label[language]}
@@ -230,7 +245,9 @@ const Navbar: React.FC = () => {
               ))}
               <Link
                 to="/"
-                className="block px-4 py-3 text-lg font-medium text-white bg-blueI hover:bg-blue rounded-md"
+                className={`block px-4 py-3 text-lg font-medium text-white bg-blueI hover:bg-blue rounded-md ${
+                  isActive("/") ? 'ring-2 ring-offset-2 ring-blueI' : ''
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {language === 'es' ? 'Tu reporte' : 'Your report'}

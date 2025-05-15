@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/semanal" element={<Weekly />} />
-        <Route path="/sobre nosotros" element={<About />} />
+        <Route path="/sobrenosotros" element={<About />} />
         <Route path="/contactanos" element={<ContactUs />} /> 
       </Routes>
       <ScrollToTop />

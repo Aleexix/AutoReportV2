@@ -159,7 +159,7 @@ const Index: React.FC = () => {
           alt=""
         />
         <img className="hidden md:block absolute top-24 right-32 z-10 w-12 h-16 object-contain" src="src/assets/Images/star.svg" alt="" />
-        <img className="hidden md:block absolute top-56 right-32 z-10 w-26 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
+        <img className="hidden md:block absolute top-56 right-32 z-15 w-26 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
       </div>
       {/* New Reports Section - DashboardGastos Cards */}
       <section className={`pt-16 pb-16 ${darkMode ? 'bg-body' : 'bg-white'}`}>
