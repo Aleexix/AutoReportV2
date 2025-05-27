@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 import pandas as pd
 import openpyxl
 import os
@@ -430,6 +431,57 @@ def procesar_forecast( epm_file_path, forecast_base_path):
 # 💾 Guardar con extensión xlsm
     forecast_wb.save(forecast_temp_path)
     print(f"✅ Forecast temporal actualizado con todas las filas de datos: {forecast_temp_path}")
+
+
+    tabla_raw = pd.read_excel(forecast_temp_path, sheet_name="Data Trx", header=None)
+    
+    # Extrae los encabezados desde la fila 2 (índice 2)
+    headers = tabla_raw.iloc[2].tolist()
+
+    # Extrae los datos desde la fila 3 en adelante
+    tabla4 = tabla_raw.iloc[3:].copy()
+    tabla4.columns = [str(col).strip().replace('\n', ' ') for col in headers]  # Limpia nombres
+
+    # Verifica nombres exactos
+    print("Columnas:", tabla4.columns.tolist())
+
+    # Define las columnas
+    country_col = 'Country'
+    brand_col = 'Brand'
+    month_col = 'Month'
+    status_col = 'Status'
+    rev_col = 'Rev ($)'
+
+    # Verifica que los valores coincidan
+    print("Países:", tabla4[country_col].unique())
+    print("Brands:", tabla4[brand_col].unique())
+    print("Meses:", tabla4[month_col].unique())
+    print("Estados:", tabla4[status_col].unique())
+
+    # Convierte 'Month' a números, ignorando errores (por si hay NaNs o strings raros)
+    tabla4[month_col] = pd.to_numeric(tabla4[month_col], errors='coerce')
+
+
+    # Aplica filtro
+    filtro = (
+        (tabla4[country_col] == "Colombia") &
+        (tabla4[brand_col] == "Cognitive") &
+        (tabla4[month_col] == 1) &
+        (tabla4[status_col].isin(["At Risk", "Won"]))
+    )
+
+    valor = tabla4.loc[filtro, rev_col].sum()
+
+    data = {    
+   "resultado": valor
+    }
+
+# Guarda el resultado
+    with open("app/resultado.json", "w") as f:
+        json.dump(data, f, indent=2)
+
+    print("✅ Resultado guardado en app/resultado.json")
+
 
     if os.path.exists(output_path):
         os.remove(output_path)

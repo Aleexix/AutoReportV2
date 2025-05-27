@@ -50,14 +50,25 @@ def configure_edge():
 
 
 
-def wait_for_download(timeout=60):
-    """Espera hasta que finalice la descarga"""
-    end_time = time.time() + timeout
-    while time.time() < end_time:
+def wait_for_download(timeout=120):
+    """Espera hasta que finalice la descarga con verificación mejorada"""
+    start_time = time.time()
+    last_check = start_time
+    
+    while (time.time() - start_time) < timeout:
+        # Verificar archivos .crdownload cada 1 segundo
         if not any(f.endswith('.crdownload') for f in os.listdir(DOWNLOAD_FOLDER)):
             return True
+        
+        # Mostrar progreso cada 15 segundos
+        if (time.time() - last_check) > 15:
+            remaining = int(timeout - (time.time() - start_time))
+            print(f"Descargando... Tiempo restante: {remaining}s")
+            last_check = time.time()
+            
         time.sleep(1)
-    raise TimeoutError("Tiempo de espera para descarga excedido")
+    
+    raise TimeoutError(f"La descarga no completó en {timeout} segundos")
 
 @main.route('/run-process', methods=['POST'])
 def run_process():
@@ -291,12 +302,13 @@ def run_process():
         current_scroll = driver.execute_script("return arguments[0].scrollTop", scrollable_div)
         print(f"6. Scroll completado - Posición actual: {current_scroll}")
 
-        time.sleep(30) # Esperar a que se cargue el contenido
+        time.sleep(20) # Esperar a que se cargue el contenido
 
         # Hacer clic en el botón Finalizar
         WebDriverWait(driver, 50).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@id="v8982"]'))
+            EC.element_to_be_clickable((By.XPATH, '/html/body/div[30]/div/div[1]/div[4]/div/table/tbody/tr[3]/td/button[2]'))
         ).click()
+
 
         time.sleep(100)  # Esperar a que se cargue el contenido
 
@@ -308,25 +320,29 @@ def run_process():
             EC.element_to_be_clickable((By.XPATH, '//*[@id="mnuAppToolbarLeftPaneFormats_spreadsheetML"]/tbody/tr/td[2]'))
         ).click()#Clic a bton Excel
 
-        # Verifica que la descarga haya comenzado
         time.sleep(100)  # Espera corta para que comience la descarga
     
-        # Verifica que hay archivos de descarga en proceso
+        # Espera inicio de descarga con verificación progresiva
         download_started = False
-        for _ in range(10):  # Intentamos por 10 segundos
+        for attempt in range(1, 11):  # 10 intentos con espera adaptable
             if any(f.endswith('.crdownload') for f in os.listdir(DOWNLOAD_FOLDER)):
                 download_started = True
                 break
-            time.sleep(1) # Espera un segundo entre intentos
     
+             # Espera progresiva: 1s, 2s, 3s,..., hasta 4s máximo por intento
+            wait_time = min(attempt, 4)
+            print(f"Intento {attempt}/10 - Esperando {wait_time}s...")
+            time.sleep(wait_time)
+
         if not download_started:
-            print("¡Advertencia! La descarga parece no haber comenzado.")
-    
-        # Si la descarga comenzó, espera a que termine
-        wait_for_download(120)  # Esperar a que se complete la descarga
-        print("¡Descarga completada!")
-    
-        time.sleep(2)  # Espera un poco más para asegurarse
+            print("¡Atención! No se detectó inicio de descarga. Verifica:")
+            print("- Conexión a internet")
+            print("- Que el archivo exista")
+            print("- Permisos de escritura en la carpeta")
+        else:
+            # Espera finalización con timeout generoso
+            wait_for_download(180)  # 3 minutos para completar
+            print("✓ Descarga finalizada correctamente")
     finally:
         if driver:
             driver.quit()
