@@ -3578,3 +3578,305 @@ KeyError: 'Country'
 2025-05-26 11:40:54,222 - INFO -  * Debugger PIN: 409-504-975
 2025-05-26 11:52:02,540 - INFO - 127.0.0.1 - - [26/May/2025 11:52:02] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
 2025-05-26 12:01:24,679 - INFO - 127.0.0.1 - - [26/May/2025 12:01:24] "POST /run-process HTTP/1.1" 200 -
+2025-05-29 19:46:59,503 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 19:46:59,574 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 19:46:59,575 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 19:46:59,577 - INFO -  * Restarting with stat
+2025-05-29 19:47:00,753 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 19:47:00,770 - WARNING -  * Debugger is active!
+2025-05-29 19:47:00,779 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:02:10,173 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\help.py', reloading
+2025-05-29 20:02:10,340 - INFO -  * Restarting with stat
+2025-05-29 20:02:11,549 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:02:11,569 - WARNING -  * Debugger is active!
+2025-05-29 20:02:11,571 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:03:24,006 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:03:24,041 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:03:24,041 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:03:24,043 - INFO -  * Restarting with stat
+2025-05-29 20:03:25,136 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:03:25,156 - WARNING -  * Debugger is active!
+2025-05-29 20:03:25,159 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:11:52,914 - INFO - 127.0.0.1 - - [29/May/2025 20:11:52] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:55,197 - INFO - 127.0.0.1 - - [29/May/2025 20:11:55] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:56,156 - INFO - 127.0.0.1 - - [29/May/2025 20:11:56] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:56,976 - INFO - 127.0.0.1 - - [29/May/2025 20:11:56] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:57,807 - INFO - 127.0.0.1 - - [29/May/2025 20:11:57] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:58,367 - INFO - 127.0.0.1 - - [29/May/2025 20:11:58] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:11:59,916 - INFO - 127.0.0.1 - - [29/May/2025 20:11:59] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:12:00,411 - INFO - 127.0.0.1 - - [29/May/2025 20:12:00] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:12:01,302 - INFO - 127.0.0.1 - - [29/May/2025 20:12:01] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:12:02,321 - INFO - 127.0.0.1 - - [29/May/2025 20:12:02] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:12:03,246 - INFO - 127.0.0.1 - - [29/May/2025 20:12:03] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:14:55,278 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\help.py', reloading
+2025-05-29 20:14:55,494 - INFO -  * Restarting with stat
+2025-05-29 20:14:59,253 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:14:59,287 - WARNING -  * Debugger is active!
+2025-05-29 20:14:59,290 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:15:12,391 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-05-29 20:15:12,507 - INFO -  * Restarting with stat
+2025-05-29 20:21:44,015 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:21:44,043 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:21:44,043 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:21:44,044 - INFO -  * Restarting with stat
+2025-05-29 20:21:45,182 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:21:45,196 - WARNING -  * Debugger is active!
+2025-05-29 20:21:45,199 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:21:49,371 - INFO - 127.0.0.1 - - [29/May/2025 20:21:49] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:23:25,761 - INFO - 127.0.0.1 - - [29/May/2025 20:23:25] "[33mOPTIONS /send-contact-email HTTP/1.1[0m" 404 -
+2025-05-29 20:26:42,921 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-05-29 20:26:43,064 - INFO -  * Restarting with stat
+2025-05-29 20:26:54,823 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:26:54,873 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:26:54,873 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:26:54,874 - INFO -  * Restarting with stat
+2025-05-29 20:26:56,400 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:26:56,413 - WARNING -  * Debugger is active!
+2025-05-29 20:26:56,416 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:26:58,050 - INFO - 127.0.0.1 - - [29/May/2025 20:26:58] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:27:06,994 - INFO - 127.0.0.1 - - [29/May/2025 20:27:06] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:29:15,235 - INFO - 127.0.0.1 - - [29/May/2025 20:29:15] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:29:24,104 - INFO - 127.0.0.1 - - [29/May/2025 20:29:24] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:31:10,323 - INFO - 127.0.0.1 - - [29/May/2025 20:31:10] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:31:19,719 - INFO - 127.0.0.1 - - [29/May/2025 20:31:19] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:31:39,043 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\__init__.py', reloading
+2025-05-29 20:31:39,178 - INFO -  * Restarting with stat
+2025-05-29 20:32:15,587 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:32:15,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:32:15,618 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:32:15,619 - INFO -  * Restarting with stat
+2025-05-29 20:32:16,792 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:32:16,808 - WARNING -  * Debugger is active!
+2025-05-29 20:32:16,810 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:32:17,537 - INFO - 127.0.0.1 - - [29/May/2025 20:32:17] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:32:17,775 - INFO - 127.0.0.1 - - [29/May/2025 20:32:17] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:34:30,633 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\__init__.py', reloading
+2025-05-29 20:34:30,802 - INFO -  * Restarting with stat
+2025-05-29 20:34:31,985 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:34:32,001 - WARNING -  * Debugger is active!
+2025-05-29 20:34:32,005 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:34:39,258 - INFO - 127.0.0.1 - - [29/May/2025 20:34:39] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:34:48,016 - INFO - 127.0.0.1 - - [29/May/2025 20:34:48] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:37:17,905 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\__init__.py', reloading
+2025-05-29 20:37:18,063 - INFO -  * Restarting with stat
+2025-05-29 20:37:32,280 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:37:32,348 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:37:32,348 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:37:32,352 - INFO -  * Restarting with stat
+2025-05-29 20:37:33,503 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:37:33,526 - WARNING -  * Debugger is active!
+2025-05-29 20:37:33,529 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:37:39,819 - INFO - 127.0.0.1 - - [29/May/2025 20:37:39] "OPTIONS /send-contact-email HTTP/1.1" 200 -
+2025-05-29 20:37:48,865 - INFO - 127.0.0.1 - - [29/May/2025 20:37:48] "[35m[1mPOST /send-contact-email HTTP/1.1[0m" 500 -
+2025-05-29 20:39:18,073 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\help.py', reloading
+2025-05-29 20:39:18,203 - INFO -  * Restarting with stat
+2025-05-29 20:47:46,000 - INFO -  * Restarting with stat
+2025-05-29 20:47:49,372 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:47:49,391 - WARNING -  * Debugger is active!
+2025-05-29 20:47:49,394 - INFO -  * Debugger PIN: 893-748-441
+2025-05-29 20:47:50,436 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-05-29 20:47:50,576 - INFO -  * Restarting with stat
+2025-05-29 20:48:12,854 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:48:12,980 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 20:48:12,981 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 20:48:12,986 - INFO -  * Restarting with stat
+2025-05-29 20:48:15,633 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-05-29 20:48:15,678 - WARNING -  * Debugger is active!
+2025-05-29 20:48:15,687 - INFO -  * Debugger PIN: 893-748-441
+2025-06-01 22:45:36,299 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-01 22:45:36,348 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-01 22:45:36,348 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-01 22:45:36,364 - INFO -  * Restarting with stat
+2025-06-01 22:45:37,272 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-01 22:45:37,301 - WARNING -  * Debugger is active!
+2025-06-01 22:45:37,314 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 11:39:16,834 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 11:39:17,223 - INFO -  * Restarting with stat
+2025-06-02 11:39:21,031 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 11:39:21,064 - WARNING -  * Debugger is active!
+2025-06-02 11:39:21,066 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 11:39:43,214 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 11:39:43,344 - INFO -  * Restarting with stat
+2025-06-02 11:39:44,673 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 11:39:44,693 - WARNING -  * Debugger is active!
+2025-06-02 11:39:44,697 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 11:39:45,714 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 11:39:45,839 - INFO -  * Restarting with stat
+2025-06-02 11:39:47,017 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 11:39:47,035 - WARNING -  * Debugger is active!
+2025-06-02 11:39:47,038 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 11:39:57,098 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 11:39:57,228 - INFO -  * Restarting with stat
+2025-06-02 11:39:58,372 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 11:39:58,391 - WARNING -  * Debugger is active!
+2025-06-02 11:39:58,393 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 11:40:02,435 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 11:40:02,554 - INFO -  * Restarting with stat
+2025-06-02 11:40:03,704 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 11:40:03,725 - WARNING -  * Debugger is active!
+2025-06-02 11:40:03,727 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:35:02,664 - ERROR - Error al leer hoja Budget: Worksheet named 'budget' not found
+2025-06-02 12:35:02,664 - INFO - 127.0.0.1 - - [02/Jun/2025 12:35:02] "[31m[1mPOST /process-budget HTTP/1.1[0m" 400 -
+2025-06-02 12:38:22,123 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:38:22,187 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 12:38:22,187 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 12:38:22,189 - INFO -  * Restarting with stat
+2025-06-02 12:38:23,147 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:38:23,158 - WARNING -  * Debugger is active!
+2025-06-02 12:38:23,169 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:44:32,346 - INFO - 127.0.0.1 - - [02/Jun/2025 12:44:32] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:45:46,005 - INFO - 127.0.0.1 - - [02/Jun/2025 12:45:46] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:46:45,216 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:46:45,393 - INFO -  * Restarting with stat
+2025-06-02 12:46:48,656 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:46:48,679 - WARNING -  * Debugger is active!
+2025-06-02 12:46:48,682 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:46:51,414 - INFO - 127.0.0.1 - - [02/Jun/2025 12:46:51] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:51:57,969 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:51:57,999 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 12:51:57,999 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 12:51:57,999 - INFO -  * Restarting with stat
+2025-06-02 12:51:59,100 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:51:59,118 - WARNING -  * Debugger is active!
+2025-06-02 12:51:59,120 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:52:26,765 - INFO - 127.0.0.1 - - [02/Jun/2025 12:52:26] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:53:02,646 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:53:02,758 - INFO -  * Restarting with stat
+2025-06-02 12:53:54,967 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:53:55,000 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 12:53:55,000 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 12:53:55,002 - INFO -  * Restarting with stat
+2025-06-02 12:53:56,300 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:53:56,322 - WARNING -  * Debugger is active!
+2025-06-02 12:53:56,324 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:53:59,733 - INFO - 127.0.0.1 - - [02/Jun/2025 12:53:59] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:56:24,200 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:56:24,330 - INFO -  * Restarting with stat
+2025-06-02 12:56:27,679 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:56:27,971 - WARNING -  * Debugger is active!
+2025-06-02 12:56:27,974 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:56:39,082 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:56:39,211 - INFO -  * Restarting with stat
+2025-06-02 12:56:40,374 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:56:40,400 - WARNING -  * Debugger is active!
+2025-06-02 12:56:40,403 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:56:53,926 - INFO - 127.0.0.1 - - [02/Jun/2025 12:56:53] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 12:57:05,592 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:05,709 - INFO -  * Restarting with stat
+2025-06-02 12:57:06,940 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:06,962 - WARNING -  * Debugger is active!
+2025-06-02 12:57:06,969 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:07,989 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:08,102 - INFO -  * Restarting with stat
+2025-06-02 12:57:09,291 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:09,312 - WARNING -  * Debugger is active!
+2025-06-02 12:57:09,316 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:11,340 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:11,458 - INFO -  * Restarting with stat
+2025-06-02 12:57:12,727 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:12,740 - WARNING -  * Debugger is active!
+2025-06-02 12:57:12,757 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:14,781 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:14,889 - INFO -  * Restarting with stat
+2025-06-02 12:57:16,006 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:16,028 - WARNING -  * Debugger is active!
+2025-06-02 12:57:16,034 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:22,073 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:22,206 - INFO -  * Restarting with stat
+2025-06-02 12:57:23,331 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:23,356 - WARNING -  * Debugger is active!
+2025-06-02 12:57:23,358 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:27,385 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 12:57:27,489 - INFO -  * Restarting with stat
+2025-06-02 12:57:28,589 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 12:57:28,612 - WARNING -  * Debugger is active!
+2025-06-02 12:57:28,614 - INFO -  * Debugger PIN: 893-748-441
+2025-06-02 12:57:35,739 - INFO - 127.0.0.1 - - [02/Jun/2025 12:57:35] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 13:00:21,772 - INFO - 127.0.0.1 - - [02/Jun/2025 13:00:21] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-02 13:08:13,317 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 13:08:13,413 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 13:08:13,413 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 13:08:13,415 - INFO -  * Restarting with stat
+2025-06-02 13:08:14,680 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 13:08:14,696 - WARNING -  * Debugger is active!
+2025-06-02 13:08:14,696 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 13:16:43,748 - INFO - 127.0.0.1 - - [02/Jun/2025 13:16:43] "POST /run-process HTTP/1.1" 200 -
+2025-06-02 14:04:22,766 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:04:27,503 - INFO -  * Restarting with stat
+2025-06-02 14:04:30,724 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:04:30,748 - WARNING -  * Debugger is active!
+2025-06-02 14:04:30,750 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:04:31,796 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:04:32,011 - INFO -  * Restarting with stat
+2025-06-02 14:04:33,237 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:04:33,262 - WARNING -  * Debugger is active!
+2025-06-02 14:04:33,264 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:04:40,311 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:04:40,435 - INFO -  * Restarting with stat
+2025-06-02 14:04:41,684 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:04:41,708 - WARNING -  * Debugger is active!
+2025-06-02 14:04:41,710 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:05:40,998 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:05:41,143 - INFO -  * Restarting with stat
+2025-06-02 14:05:42,486 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:05:42,513 - WARNING -  * Debugger is active!
+2025-06-02 14:05:42,517 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:08:46,313 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:08:46,440 - INFO -  * Restarting with stat
+2025-06-02 14:08:47,459 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:08:47,476 - WARNING -  * Debugger is active!
+2025-06-02 14:08:47,478 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:09:09,624 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:09:09,738 - INFO -  * Restarting with stat
+2025-06-02 14:09:10,738 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:09:10,755 - WARNING -  * Debugger is active!
+2025-06-02 14:09:10,771 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:09:14,802 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:09:14,911 - INFO -  * Restarting with stat
+2025-06-02 14:09:15,988 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:09:16,015 - WARNING -  * Debugger is active!
+2025-06-02 14:09:16,017 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:10:08,342 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:10:08,496 - INFO -  * Restarting with stat
+2025-06-02 14:10:26,126 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:10:26,162 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 14:10:26,162 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 14:10:26,162 - INFO -  * Restarting with stat
+2025-06-02 14:10:27,253 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:10:27,286 - WARNING -  * Debugger is active!
+2025-06-02 14:10:27,289 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:12:44,049 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:12:44,161 - INFO -  * Restarting with stat
+2025-06-02 14:12:46,841 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:12:46,873 - WARNING -  * Debugger is active!
+2025-06-02 14:12:46,873 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:12:59,572 - INFO - 127.0.0.1 - - [02/Jun/2025 14:12:59] "[31m[1mPOST /process-budget HTTP/1.1[0m" 400 -
+2025-06-02 14:14:35,490 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-02 14:14:35,612 - INFO -  * Restarting with stat
+2025-06-02 14:14:36,920 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:14:36,948 - WARNING -  * Debugger is active!
+2025-06-02 14:14:36,953 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:14:57,791 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:14:57,834 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-02 14:14:57,834 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-02 14:14:57,836 - INFO -  * Restarting with stat
+2025-06-02 14:14:58,959 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-02 14:14:58,985 - WARNING -  * Debugger is active!
+2025-06-02 14:14:58,990 - INFO -  * Debugger PIN: 259-138-747
+2025-06-02 14:15:52,860 - INFO - 127.0.0.1 - - [02/Jun/2025 14:15:52] "POST /process-budget HTTP/1.1" 200 -
+2025-06-02 14:17:23,655 - INFO - 127.0.0.1 - - [02/Jun/2025 14:17:23] "POST /process-budget HTTP/1.1" 200 -
+2025-06-02 14:27:48,822 - INFO - 127.0.0.1 - - [02/Jun/2025 14:27:48] "POST /run-process HTTP/1.1" 200 -

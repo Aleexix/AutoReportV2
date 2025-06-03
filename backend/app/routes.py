@@ -2,6 +2,8 @@ from flask import Blueprint, request, send_file, jsonify
 import os
 import time
 import logging
+from openpyxl import load_workbook
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
@@ -9,6 +11,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from openpyxl.utils.dataframe import dataframe_to_rows
 
 from .utils.forecast_processor import procesar_forecast
 
@@ -48,6 +51,99 @@ def configure_edge():
     })
     return edge_options
 
+from openpyxl.utils.dataframe import dataframe_to_rows
+from flask import request, jsonify
+import pandas as pd
+from openpyxl import load_workbook
+import os
+import logging
+
+@main.route('/process-budget', methods=['POST'])
+def process_budget():
+    try:
+        print("1. Iniciando procesamiento de archivo budget...")
+        
+        # 1. Verificar que se envió el archivo
+        print("2. Verificando si se recibió el archivo...")
+        if 'budgetFile' not in request.files:
+            print("Error: No se encontró 'budgetFile' en los archivos recibidos")
+            return jsonify({"error": "No se proporcionó archivo"}), 400
+        
+        budget_file = request.files['budgetFile']
+        print(f"3. Archivo recibido: {budget_file.filename}")
+        
+        # 2. Validar extensión del archivo
+        print("4. Validando extensión del archivo...")
+        if not budget_file.filename.lower().endswith(('.xlsx', '.xls', '.xlsm')):
+            print(f"Error: Formato de archivo no válido: {budget_file.filename}")
+            return jsonify({"error": "Formato de archivo no válido"}), 400
+        
+        # 3. Definir rutas
+        print("5. Definiendo rutas...")
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        forecast_path = os.path.join(BASE_DIR, 'data', 'forecast_base.xlsm')
+        print(f"6. Ruta base: {BASE_DIR}")
+        print(f"7. Ruta forecast: {forecast_path}")
+        
+        # Verificar si existe el archivo forecast_base.xlsm
+        if not os.path.exists(forecast_path):
+            print(f"Error: No se encontró el archivo forecast_base en: {forecast_path}")
+            return jsonify({"error": "Archivo forecast_base.xlsm no encontrado"}), 400
+        
+        # 4. Leer datos del archivo subido (hoja budget)
+        print("8. Leyendo archivo Excel subido...")
+        with pd.ExcelFile(budget_file) as xls:
+            print(f"9. Hojas disponibles en el archivo: {xls.sheet_names}")
+            
+            if 'budget' not in xls.sheet_names:
+                print("Error: No se encontró la hoja 'budget' en el archivo")
+                return jsonify({"error": "El archivo no contiene la hoja 'budget'"}), 400
+            
+            print("10. Leyendo hoja 'budget'...")
+            budget_data = pd.read_excel(xls, sheet_name='budget')
+            print(f"11. Datos leídos. Dimensiones: {budget_data.shape}")
+        
+        # 5. Procesar el forecast_base.xlsm
+        print("12. Cargando forecast_base.xlsm...")
+        wb = load_workbook(forecast_path, read_only=False, keep_vba=True)
+        print(f"13. Hojas disponibles en forecast: {wb.sheetnames}")
+        
+        # Verificar si existe la hoja oculta
+        if 'Data Input Consol Q' not in wb.sheetnames:
+            print("Error: No se encontró la hoja 'Data Input Consol Q'")
+            return jsonify({"error": "No se encontró la hoja 'Data Input Consol Q'"}), 400
+        
+        # Acceder a la hoja (aunque esté oculta)
+        print("14. Accediendo a la hoja 'Data Input Consol Q'...")
+        ws = wb['Data Input Consol Q']
+        print(f"15. Hoja obtenida. Filas actuales: {ws.max_row}, Columnas: {ws.max_column}")
+        
+        # 6. Limpiar hoja existente
+        print("16. Limpiando hoja existente...")
+        ws.delete_rows(1, ws.max_row)
+        print(f"17. Hoja limpiada. Filas después de limpiar: {ws.max_row}")
+        
+        # 7. Escribir los nuevos datos
+        print("18. Escribiendo nuevos datos...")
+        for r in dataframe_to_rows(budget_data, index=False, header=True):
+            ws.append(r)
+        print(f"19. Datos escritos. Filas después de escribir: {ws.max_row}")
+        
+        # 8. Guardar cambios
+        print("20. Guardando cambios en forecast_base.xlsm...")
+        wb.save(forecast_path)
+        print("21. Archivo guardado exitosamente")
+        
+        return jsonify({"message": "Archivo procesado correctamente"}), 200
+    
+    except Exception as e:
+        print(f"ERROR CRÍTICO: {str(e)}")
+        logging.error(f"Error al procesar archivo budget: {str(e)}", exc_info=True)
+        return jsonify({
+            "error": "Error al procesar el archivo",
+            "details": str(e),
+            "step": "Ver logs para ver el último paso ejecutado antes del error"
+        }), 500
 
 
 def wait_for_download(timeout=120):

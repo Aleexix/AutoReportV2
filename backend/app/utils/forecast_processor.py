@@ -458,6 +458,7 @@ def procesar_forecast( epm_file_path, forecast_base_path):
     print("Meses:", tabla4[month_col].unique())
     print("Estados:", tabla4[status_col].unique())
 
+
     # Convierte 'Month' a números, ignorando errores (por si hay NaNs o strings raros)
     tabla4[month_col] = pd.to_numeric(tabla4[month_col], errors='coerce')
 
