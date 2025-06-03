@@ -155,7 +155,7 @@ const Index: React.FC = () => {
         {/* Background decorations remain the same */}
         <img
           className="absolute bottom-0 right-0 w-1/2 md:w-auto"
-          src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/Images/Group 1.svg'}`}
+          src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/assets/Images/Group_1.svg'}`}
           alt=""
         />
         <img className="hidden md:block absolute top-24 right-32 z-10 w-12 h-16 object-contain" src="src/assets/Images/star.svg" alt="" />
@@ -169,12 +169,12 @@ const Index: React.FC = () => {
               {language === 'es' ? 'Recientes' : 'Recent'}
             </span>
             <h2 className={`mb-4 text-5xl sm:text-6xl md:text-6xl lg:text-7xl tracking-tight mx-auto ${darkMode ? 'text-white' : 'text-black'}`}>
-              {language === 'es' ? 'Últimos reportes disponibles' : 'Latest available reports'}
+              {language === 'es' ? 'Resumen disponible' : 'Summary available'}
             </h2>
             <p className={`mb-12 text-base sm:text-lg max-w-xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
               {language === 'es'
-                ? 'Aquí se generarán los reportes más recientes de los días Lunes y viernes.'
-                : 'Here are the most recent reports of Monday and Friday.'}
+                ? 'Aquí se generará un mini resumen de los datos del último archivo generado.'
+                : 'Here a mini summary of the data from the last generated file will be generated.'}
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-10">

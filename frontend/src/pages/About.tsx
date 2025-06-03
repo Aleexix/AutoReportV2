@@ -33,7 +33,7 @@ const About = () => {
                 <div className="container px-4 mx-auto">
                     {/* Imágenes de estrellas responsivas */}
                     <img className="hidden md:block absolute top-52 right-24 z-10 w-12 h-12 object-contain" src="src/assets/Images/star.svg" alt="" />
-                    <img className="hidden md:block absolute top-56 right-32 z-10 w-12 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
+                    <img className="hidden md:block absolute top-80 right-32 z-10 w-12 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
                     
                     <div className="md:max-w-xl text-center mx-auto mb-12 mt-8">
                 
@@ -48,7 +48,7 @@ const About = () => {
                     {/* Imagen de fondo responsiva */}
                     <img 
                         className="absolute bottom-0  right-0" 
-                        src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/assets/Images/Group 1.svg'}`} 
+                        src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/assets/Images/Group_1.svg'}`} 
                         alt="" 
                     />
 
