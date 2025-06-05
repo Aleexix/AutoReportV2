@@ -74,13 +74,14 @@ const Budget = () => {
             className={`-mt-32 text-7xl tracking-tighter ${darkMode ? "text-white" : "text-black"
               }`}
           >
-            {language === "es" ? "Subir file Budget" : "Upload file Budget"}
+            {language === "es" ? "Subir archivo Budget" : "Upload Budget File"}
           </h2>
           <h5 className={`mt-10 text-1xl tracking-tighter ${darkMode ? "text-gray-400" : "text-black"
               }`}
           >
-          {language === "es" ? "Carga el archivo con el nombre de Consol_Inpunt_Budget para procesarlo automáticamente. Asegúrate de que tenga una hoja llamada 'budget'." : "Upload the file named Consol_Inpunt_Budget to process it automatically. Make sure it has a sheet named 'budget'."}
-
+          {language === "es" 
+            ? "Carga el archivo con el nombre de Consol_Input_Budget para procesarlo automáticamente. Asegúrate de que tenga una hoja llamada 'budget'." 
+            : "Upload the file named Consol_Input_Budget to process it automatically. Make sure it has a sheet named 'budget'."}
           </h5>
         </div>
 
@@ -108,7 +109,7 @@ const Budget = () => {
             onClick={handleButtonClick}
             className="px-10 py-4 rounded-full text-lg font-semibold tracking-wide transition-transform transform hover:scale-105 border-2 border-blueI bg-blueI text-black focus:ring-4 focus:ring-blueI focus:ring-opacity-40"
           >
-            {language === "es" ? "Seleccionar archivo" : "Select file"}
+            {language === "es" ? "Seleccionar archivo" : "Select File"}
           </button>
         </div>
       </div>

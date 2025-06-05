@@ -169,12 +169,12 @@ const Index: React.FC = () => {
               {language === 'es' ? 'Recientes' : 'Recent'}
             </span>
             <h2 className={`mb-4 text-5xl sm:text-6xl md:text-6xl lg:text-7xl tracking-tight mx-auto ${darkMode ? 'text-white' : 'text-black'}`}>
-              {language === 'es' ? 'Resumen disponible' : 'Summary available'}
+              {language === 'es' ? 'Resumen disponible' : 'Available Summary'}
             </h2>
             <p className={`mb-12 text-base sm:text-lg max-w-xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
               {language === 'es'
                 ? 'Aquí se generará un mini resumen de los datos del último archivo generado.'
-                : 'Here a mini summary of the data from the last generated file will be generated.'}
+                : 'Here, a mini summary of the data from the last generated file will be created.'}
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-10">

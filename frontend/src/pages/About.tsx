@@ -38,10 +38,10 @@ const About = () => {
                     <div className="md:max-w-xl text-center mx-auto mb-12 mt-8">
                 
                         <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
-                            {language === 'es' ? 'Sobre Nosotros' : 'about us'}
+                            {language === 'es' ? 'Sobre Nosotros' : 'About Us'}
                         </span>
                         <h2 className={`text-4xl md:text-7xl tracking-tighter-xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                            {language === 'es' ? 'Nuestra visión, tecnología y equipo.' : 'Our vision, technology and equipment.'}
+                            {language === 'es' ? 'Nuestra visión, tecnología y equipo.' : 'Our vision, technology and team.'}
                         </h2><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/assets/Images/layer-blur.svg' : ''}`} alt="" />
                     </div>
 
@@ -71,11 +71,11 @@ const About = () => {
                                     {language === 'es' ? 'Practicas en IBM' : 'Internships at IBM'}
                                 </span>
                                 <h2 className={`mb-6 text-3xl md:text-6xl tracking-tighter ${darkMode ? 'text-white' : 'text-black'}`}>
-                                    {language === 'es' ? 'Practicantes con un objetivo claro' : 'Practitioners with a clear goal'}
+                                    {language === 'es' ? 'Practicantes con un objetivo claro' : 'Interns with a clear objective'}
                                 </h2>
 
                                 <p className={`mb-8 text-opacity-60 w-full max-w-md ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                                    {language === 'es' ? 'Hola! nosotros somos practicantes de IBM en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion en la unidad, ' : 'Hello! we are IBM practitioners in the sales unit in the year 2025, this project comes from a need for automation of the unit,'}
+                                    {language === 'es' ? 'Hola! nosotros somos practicantes de IBM en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion en la unidad, ' : 'Hello! We are IBM interns in the sales unit in 2025. This project stems from a need for automation in the unit,'}
                                 </p>
                                 
                                 {/* Lógica de expandir/contraer texto */}
@@ -85,14 +85,14 @@ const About = () => {
                                         href="#"
                                         onClick={toggleReadMore}
                                     >
-                                        {language === 'es' ? 'Leer mas' : 'Read the rest'}
+                                        {language === 'es' ? 'Leer mas' : 'Read more'}
                                     </a>
                                 ) : (
                                     <>
                                         <p className={`mb-10 text-opacity-60 w-full max-w-md ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                                            {language === 'es' ? 'reduciendo tareas repetitivas y mejorando la eficiencia del equipo. Buscamos implementar soluciones tecnológicas que faciliten el trabajo diario y permitan un acceso más rápido y preciso a la información.' : 'Reducing repetitive tasks and improving team efficiency. We seek to implement technological solutions that facilitate daily work and allow faster and more accurate access to information.'}
+                                            {language === 'es' ? 'reduciendo tareas repetitivas y mejorando la eficiencia del equipo. Buscamos implementar soluciones tecnológicas que faciliten el trabajo diario y permitan un acceso más rápido y preciso a la información.' : 'reducing repetitive tasks and improving team efficiency. We seek to implement technological solutions that facilitate daily work and allow faster and more accurate access to information.'}
                                             <br /> <br />
-                                            {language === 'es' ? 'Nuestro objetivo es crear herramientas que simplifiquen la generación de reportes, asegurando mayor rapidez y precisión en la toma de decisiones. ¡Estamos emocionados por este reto y listos para innovar! 🚀' : 'Our goal is to create tools that simplify the generation of reports, ensuring faster and more accurate decision-making. ¡ We are excited about this challenge and ready to innovate! 🚀 '}
+                                            {language === 'es' ? 'Nuestro objetivo es crear herramientas que simplifiquen la generación de reportes, asegurando mayor rapidez y precisión en la toma de decisiones. ¡Estamos emocionados por este reto y listos para innovar! 🚀' : 'Our goal is to create tools that simplify report generation, ensuring greater speed and precision in decision making. We are excited about this challenge and ready to innovate! 🚀'}
                                         </p>
                                         <a
                                             className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
@@ -116,13 +116,13 @@ const About = () => {
                         <div className="w-full md:w-1/2 p-4">
                             <div className="md:max-w-md">
                                 <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
-                                    {language === 'es' ? 'Documentacion' : 'Docs'}
+                                    {language === 'es' ? 'Documentacion' : 'Documentation'}
                                 </span>
                                 <h2 className={`mb-8 text-4xl md:text-6xl tracking-tighter-xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                                    {language === 'es' ? 'tecnologias y como se hizo' : 'technologies and how they were'}
+                                    {language === 'es' ? 'tecnologias y como se hizo' : 'Technologies and how it was made'}
                                 </h2>
                                 <p className={`mb-8 text-base md:text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                                    {language === 'es' ? 'En este proyecto se utilizaron estas tecnologias + IMB RPA, por el lado del FrontEnd se utilzo el framework de react+vite haciendo que el software fuera un poco mas rapido y para el BackEnd se utilizo python y para la automatizacion IBM RPA...' : 'In this project we used these technologies + IMB RPA, on the FrontEnd side we used the react+vite framework making the software a little faster and for the BackEnd python was used and for the automation IBM RPA'}
+                                    {language === 'es' ? 'En este proyecto se utilizaron estas tecnologias + IMB RPA, por el lado del FrontEnd se utilzo el framework de react+vite haciendo que el software fuera un poco mas rapido y para el BackEnd se utilizo python y para la automatizacion IBM RPA...' : 'In this project we used these technologies + IBM RPA. On the frontend side we used the React+Vite framework making the software a bit faster, and for the backend we used Python and for automation IBM RPA...'}
                                 </p>
 
                                 {/* Lógica de expandir/contraer texto */}
@@ -132,12 +132,12 @@ const About = () => {
                                         href="#"
                                         onClick={toggleReadMoreDocs}
                                     >
-                                        {language === 'es' ? 'Leer mas' : 'Read the rest'}
+                                        {language === 'es' ? 'Leer mas' : 'Read more'}
                                     </a>
                                 ) : (
                                     <>
                                         <p className={`mb-8 text-base md:text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                                            {language === 'es' ? 'Primero, se elaboró el cronograma y, con base en este, se inició el desarrollo del proyecto. Se establecieron los objetivos, alcance y requerimientos, seguidos de la creación de bocetos y maquetas de la interfaz. Luego, se implementó el frontend tomando en cuenta los diseños previos. Posteriormente, se definió la arquitectura del sistema y las APIs necesarias. Después, se desarrolló el bot en IBM RPA para la automatización. A continuación, se implementó el backend en Python, asegurando su correcto funcionamiento. Finalmente, se realizó la integración del bot RPA con el backend y este con el frontend, logrando la conexión completa del sistema.' : 'First, the timetable was drawn up and, on this basis, the development of the project began. Objectives, scope and requirements were established, followed by the creation of sketches and mock-ups of the interface. The frontend was then implemented taking into account previous designs. Subsequently, the system architecture and the necessary APIs were defined. Then, the bot was developed in IBM RPA for automation. Then, the backend was implemented in Python, ensuring its proper functioning. Finally, the RPA bot was integrated with the backend and this with the frontend, achieving the complete system connection.'}
+                                            {language === 'es' ? 'Primero, se elaboró el cronograma y, con base en este, se inició el desarrollo del proyecto. Se establecieron los objetivos, alcance y requerimientos, seguidos de la creación de bocetos y maquetas de la interfaz. Luego, se implementó el frontend tomando en cuenta los diseños previos. Posteriormente, se definió la arquitectura del sistema y las APIs necesarias. Después, se desarrolló el bot en IBM RPA para la automatización. A continuación, se implementó el backend en Python, asegurando su correcto funcionamiento. Finalmente, se realizó la integración del bot RPA con el backend y este con el frontend, logrando la conexión completa del sistema.' : 'First, the schedule was developed and, based on this, project development began. Objectives, scope and requirements were established, followed by the creation of interface sketches and mockups. Then, the frontend was implemented taking into account previous designs. Subsequently, the system architecture and necessary APIs were defined. Next, the bot was developed in IBM RPA for automation. Then, the backend was implemented in Python, ensuring its proper functioning. Finally, the RPA bot was integrated with the backend and this with the frontend, achieving complete system connection.'}
                                         </p>
                                         <a
                                             className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
@@ -185,10 +185,10 @@ const About = () => {
                 <div className="container px-4 mx-auto">
                     <div className="mb-20 md:max-w-xl text-center mx-auto">
                         <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
-                            {language === 'es' ? 'nuestro equipo' : 'our team'}
+                            {language === 'es' ? 'nuestro equipo' : 'Our Team'}
                         </span>
                         <h2 className={`text-4xl md:text-7xl lg:text-8xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                            {language === 'es' ? 'Detalles' : 'details'}
+                            {language === 'es' ? 'Detalles' : 'Details'}
                         </h2>
                     </div>
                     <div className="flex flex-wrap justify-center items-center text-center -m-4">
