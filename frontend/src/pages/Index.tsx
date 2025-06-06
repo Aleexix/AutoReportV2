@@ -67,8 +67,15 @@ const Index: React.FC = () => {
 
   return (
     <>
+    <img
+          className="absolute top-0 left-48 z-10 "
+          src={darkMode ? "src/assets/Images/layer-blur.svg" : ""}
+          alt=""
+        />
       <div className={`relative pb-10 md:pb-5 ${darkMode ? 'bg-body' : 'bg-white'}`}>
+        
         <div className="relative z-10 container px-4 mx-auto">
+          
           <div className="max-w-5xl mx-auto">
             {/* Diseño Desktop Normal */}
             <div className="hidden md:flex flex-row items-center -m-4">
@@ -80,6 +87,7 @@ const Index: React.FC = () => {
                     alt="Dashboard Preview"
                   />
                 </div>
+                
               </div>
               <div className="w-1/2 p-4 order-2 space-y-6">
                 <h2 className={`text-6xl tracking-tighter text-left ${darkMode ? 'text-white' : 'text-black'}`}>
