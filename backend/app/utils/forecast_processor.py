@@ -6,6 +6,7 @@ import os
 import shutil
 import numpy as np
 from openpyxl.utils import get_column_letter, column_index_from_string
+from app.utils.week_to_friday import calcular_forecast
 pd.set_option('future.no_silent_downcasting', True) 
 
 def procesar_forecast( epm_file_path, forecast_base_path):
@@ -432,56 +433,145 @@ def procesar_forecast( epm_file_path, forecast_base_path):
     forecast_wb.save(forecast_temp_path)
     print(f"✅ Forecast temporal actualizado con todas las filas de datos: {forecast_temp_path}")
 
+    print("5. Definiendo rutas...")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # C:\AutoReportV2\backend\app\utils
+    forecast_path = os.path.join(BASE_DIR, '..', '..', 'data', 'forecast_base.xlsm')  # Sube DOS niveles
+    print(f"6. Ruta base: {BASE_DIR}")
+    print(f"7. Ruta forecast: {forecast_path}")
 
-    tabla_raw = pd.read_excel(forecast_temp_path, sheet_name="Data Trx", header=None)
-    
-    # Extrae los encabezados desde la fila 2 (índice 2)
-    headers = tabla_raw.iloc[2].tolist()
+    if datetime.today().weekday() == 3: # 0 = lunes
+        print("📅 Hoy es lunes, iniciando forecast...")
 
-    # Extrae los datos desde la fila 3 en adelante
-    tabla4 = tabla_raw.iloc[3:].copy()
-    tabla4.columns = [str(col).strip().replace('\n', ' ') for col in headers]  # Limpia nombres
+        # Llama a la función que genera el archivo JSON
+        calcular_forecast()
 
-    # Verifica nombres exactos
-    print("Columnas:", tabla4.columns.tolist())
+    # Abre Excel y JSON para escribir resultados
+        wb = openpyxl.load_workbook(forecast_path, keep_vba=True)
+        ws = wb["Summary Trx"]
 
-    # Define las columnas
-    country_col = 'Country'
-    brand_col = 'Brand'
-    month_col = 'Month'
-    status_col = 'Status'
-    rev_col = 'Rev ($)'
+        with open("app/resultado.json", "r") as f:
+            data = json.load(f)
 
-    # Verifica que los valores coincidan
-    print("Países:", tabla4[country_col].unique())
-    print("Brands:", tabla4[brand_col].unique())
-    print("Meses:", tabla4[month_col].unique())
-    print("Estados:", tabla4[status_col].unique())
+        # Aquí defines el mapeo clave → celda
+        mapeo = {
 
+            #CVL
+            "Mainframe-Cognitive_Colombia-Venezuela-LCR_1": "N14",
+            "Mainframe-Cognitive_Colombia-Venezuela-LCR_1-2": "O14",
+            "Mainframe-Cognitive_Colombia-Venezuela-LCR_3": "P14",
+            "Mainframe_Colombia-Venezuela-LCR_1": "N15",
+            "Mainframe_Colombia-Venezuela-LCR_1-2": "O15",
+            "Mainframe_Colombia-Venezuela-LCR_3": "P15",
+            "Cognitive_Colombia-Venezuela-LCR_1": "N16",
+            "Cognitive_Colombia-Venezuela-LCR_1-2": "O16",
+            "Cognitive_Colombia-Venezuela-LCR_3": "P16",
+            "Storage HW-Storage TPS_Colombia-Venezuela-LCR_1": "N17",
+            "Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2": "O17",
+            "Storage HW-Storage TPS_Colombia-Venezuela_LCR_3": "P17",
+            "Storage HW_Colombia-Venezuela_LCR_1": "N18",
+            "Storage HW_Colombia-Venezuela_LCR_1-2": "O18",
+            "Storage HW_Colombia-Venezuela_LCR_3": "P18",
+            "Storage TPS_Colombia-Venezuela_LCR_1": "N19",
+            "Storage TPS_Colombia-Venezuela_LCR_1-2": "O19",
+            "Storage TPS_Colombia-Venezuela_LCR_3": "P19",
+            "Z Middleware_Colombia-Venezuela_LCR_1": "N20",
+            "Z Middleware_Colombia-Venezuela_LCR_1-2": "O20",
+            "Z Middleware_Colombia-Venezuela_LCR_3": "P20",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_1": "N21",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_1-2": "O21",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_3": "P21",
+            
+            # COLOMBIA
+            "Mainframe-Cognitive_Colombia_1": "N23",
+            "Mainframe-Cognitive_Colombia_1-2": "O23",
+            "Mainframe-Cognitive_Colombia_1-2": "P23",
+            "Mainframe_Colombia_1": "N24",
+            "Mainframe_Colombia_1-2": "O24",
+            "Mainframe_Colombia_3": "P24",
+            "Cognitive_Colombia_1": "N25",
+            "Cognitive_Colombia_1-2": "O25",
+            "Cognitive_Colombia_3": "P25",
+            "Storage HW-Storage TPS_Colombia_1": "N26",
+            "Storage HW-Storage TPS_Colombia_1-2": "O26",
+            "Storage HW-Storage TPS_Colombia_3": "P26",
+            "Storage HW_Colombia_1": "N27",
+            "Storage HW_Colombia_1-2": "O27",
+            "Storage HW_Colombia_3": "P27",
+            "Storage TPS_Colombia_1": "N28",
+            "Storage TPS_Colombia_1-2": "O28",
+            "Storage TPS_Colombia_3": "P28",
+            "Z Middleware_Colombia_1": "N29",
+            "Z Middleware_Colombia_1-2": "O29",
+            "Z Middleware_Colombia_3": "P29",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia_1": "N30",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia_1-2": "O30",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia_3": "P30",
 
-    # Convierte 'Month' a números, ignorando errores (por si hay NaNs o strings raros)
-    tabla4[month_col] = pd.to_numeric(tabla4[month_col], errors='coerce')
+            # VENEZUELA
+            "Mainframe-Cognitive_Venezuela_1": "N32",
+            "Mainframe-Cognitive_Venezuela_1-2": "O32",
+            "Mainframe-Cognitive_Venezuela_3": "P32",
+            "Mainframe_Venezuela_1": "N33",
+            "Mainframe_Venezuela_1-2": "O33",
+            "Mainframe_Venezuela_3": "P33",
+            "Cognitive_Venezuela_1": "N34",
+            "Cognitive_Venezuela_1-2": "O34",
+            "Cognitive_Venezuela_3": "P34",
+            "Storage HW-Storage TPS_Venezuela_1": "N35",
+            "Storage HW-Storage TPS_Venezuela_1-2": "O35",
+            "Storage HW-Storage TPS_Venezuela_3": "P35",
+            "Storage HW_Venezuela_1": "N36",
+            "Storage HW_Venezuela_1-2": "O36",
+            "Storage HW_Venezuela_3": "P36",
+            "Storage TPS_Venezuela_1": "N37",
+            "Storage TPS_Venezuela_1-2": "O37",
+            "Storage TPS_Venezuela_3": "P37",
+            "Z Middleware_Venezuela_1": "N38",
+            "Z Middleware_Venezuela_1-2": "O38",
+            "Z Middleware_Venezuela_3": "P38",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Venezuela_1": "N39",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Venezuela_1-2": "O39",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Venezuela_3": "P39",
 
+            # LCR
+            "Mainframe-Cognitive_LCR_1": "N41",
+            "Mainframe-Cognitive_LCR_1-2": "O41",
+            "Mainframe-Cognitive_LCR_3": "P41",
+            "Mainframe_LCR_1": "N42",
+            "Mainframe_LCR_1-2": "O42",
+            "Mainframe_LCR_3": "P42",
+            "Cognitive_LCR_1": "N43",
+            "Cognitive_LCR_1-2": "O43",
+            "Cognitive_LCR_3": "P43",
+            "Storage HW-Storage TPS_LCR_1": "N44",
+            "Storage HW-Storage TPS_LCR_1-2": "O44",
+            "Storage HW-Storage TPS_LCR_3": "P44",
+            "Storage HW_LCR_1": "N45",
+            "Storage HW_LCR_1-2": "O45",
+            "Storage HW_LCR_3": "P45",
+            "Storage TPS_LCR_1": "N46",
+            "Storage TPS_LCR_1-2": "O46",
+            "Storage TPS_LCR_3": "P46",
+            "Z Middleware_LCR_1": "N47",
+            "Z Middleware_LCR_1-2": "O47",
+            "Z Middleware_LCR_3": "P47",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_LCR_1": "N48",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_LCR_1-2": "O48",
+            "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_LCR_3": "P48",
+        }
 
-    # Aplica filtro
-    filtro = (
-        (tabla4[country_col] == "Colombia") &
-        (tabla4[brand_col] == "Cognitive") &
-        (tabla4[month_col] == 1) &
-        (tabla4[status_col].isin(["At Risk", "Won"]))
-    )
+        for clave, celda in mapeo.items():
+            if clave in data:
+                ws[celda] = data[clave]
 
-    valor = tabla4.loc[filtro, rev_col].sum()
+        try:
+            wb.save(forecast_path)
+            print("✅ Forecast_base actualizado correctamente (macros preservadas).")
+        except Exception as e:
+            print(f"❌ Error al guardar: {e}")
 
-    data = {    
-   "resultado": valor
-    }
-
-# Guarda el resultado
-    with open("app/resultado.json", "w") as f:
-        json.dump(data, f, indent=2)
-
-    print("✅ Resultado guardado en app/resultado.json")
+    else:
+        print("⛔ No es lunes, no se actualiza forecast.")
 
 
     if os.path.exists(output_path):

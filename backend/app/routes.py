@@ -245,7 +245,7 @@ def run_process():
         print("2. Cambio al iframe exitoso")
 
         print("3. Buscando el div scrollable clsViewerPage...")
-        scrollable_div = WebDriverWait(driver, 10).until(
+        scrollable_div = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CLASS_NAME, "clsViewerPage"))
         )
         print(f"4. Div encontrado - Visible: {scrollable_div.is_displayed()} - Tamaño: {scrollable_div.size}")
@@ -431,10 +431,7 @@ def run_process():
             time.sleep(wait_time)
 
         if not download_started:
-            print("¡Atención! No se detectó inicio de descarga. Verifica:")
-            print("- Conexión a internet")
-            print("- Que el archivo exista")
-            print("- Permisos de escritura en la carpeta")
+            print("¡Atención! No se detectó inicio de descarga...")
         else:
             # Espera finalización con timeout generoso
             wait_for_download(180)  # 3 minutos para completar

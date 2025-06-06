@@ -3880,3 +3880,736 @@ KeyError: 'Country'
 2025-06-02 14:15:52,860 - INFO - 127.0.0.1 - - [02/Jun/2025 14:15:52] "POST /process-budget HTTP/1.1" 200 -
 2025-06-02 14:17:23,655 - INFO - 127.0.0.1 - - [02/Jun/2025 14:17:23] "POST /process-budget HTTP/1.1" 200 -
 2025-06-02 14:27:48,822 - INFO - 127.0.0.1 - - [02/Jun/2025 14:27:48] "POST /run-process HTTP/1.1" 200 -
+2025-06-03 10:35:27,725 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-03 10:35:27,848 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-03 10:35:27,848 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-03 10:35:27,853 - INFO -  * Restarting with stat
+2025-06-03 10:35:29,534 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-03 10:35:29,563 - WARNING -  * Debugger is active!
+2025-06-03 10:35:29,569 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 15:30:59,356 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-05 15:30:59,849 - INFO -  * Restarting with stat
+2025-06-05 15:31:04,037 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 15:31:04,088 - WARNING -  * Debugger is active!
+2025-06-05 15:31:04,088 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 15:31:07,161 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-05 15:31:07,331 - INFO -  * Restarting with stat
+2025-06-05 15:31:08,572 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 15:31:08,597 - WARNING -  * Debugger is active!
+2025-06-05 15:31:08,605 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:07:22,333 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:07:22,509 - INFO -  * Restarting with stat
+2025-06-05 16:07:26,933 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:07:26,963 - WARNING -  * Debugger is active!
+2025-06-05 16:07:26,966 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:07:48,173 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:07:48,301 - INFO -  * Restarting with stat
+2025-06-05 16:07:49,708 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:07:49,738 - WARNING -  * Debugger is active!
+2025-06-05 16:07:49,738 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:07:54,791 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:07:54,971 - INFO -  * Restarting with stat
+2025-06-05 16:07:56,319 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:07:56,345 - WARNING -  * Debugger is active!
+2025-06-05 16:07:56,348 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:07:57,367 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:07:57,520 - INFO -  * Restarting with stat
+2025-06-05 16:07:58,833 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:07:58,850 - WARNING -  * Debugger is active!
+2025-06-05 16:07:58,857 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:13:58,542 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:13:58,681 - INFO -  * Restarting with stat
+2025-06-05 16:14:02,970 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:14:03,000 - WARNING -  * Debugger is active!
+2025-06-05 16:14:03,003 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 16:14:29,283 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 16:14:29,428 - INFO -  * Restarting with stat
+2025-06-05 16:58:50,857 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:58:50,949 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 16:58:50,949 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 16:58:50,951 - INFO -  * Restarting with stat
+2025-06-05 16:58:52,707 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 16:58:52,729 - WARNING -  * Debugger is active!
+2025-06-05 16:58:52,732 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 17:18:45,315 - ERROR - Error al procesar el archivo descargado: 'tuple' object is not callable
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 486, in procesar_forecast
+    (["Mainframe", "Cognitive", "Storage HW", "Storage TPS", "Z Middleware"], "Colombia", 3)
+TypeError: 'tuple' object is not callable
+2025-06-05 17:18:45,390 - INFO - 127.0.0.1 - - [05/Jun/2025 17:18:45] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 17:20:52,267 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 17:20:56,717 - INFO -  * Restarting with stat
+2025-06-05 17:21:01,131 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 17:21:01,177 - WARNING -  * Debugger is active!
+2025-06-05 17:21:01,179 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 17:29:33,739 - INFO - 127.0.0.1 - - [05/Jun/2025 17:29:33] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 17:35:12,888 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 17:35:17,868 - INFO -  * Restarting with stat
+2025-06-05 17:35:21,708 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 17:35:21,735 - WARNING -  * Debugger is active!
+2025-06-05 17:35:21,739 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 17:35:23,799 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 17:35:23,968 - INFO -  * Restarting with stat
+2025-06-05 17:35:25,333 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 17:35:25,356 - WARNING -  * Debugger is active!
+2025-06-05 17:35:25,356 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 17:35:26,383 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 17:35:26,502 - INFO -  * Restarting with stat
+2025-06-05 17:37:14,759 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 17:37:14,822 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 17:37:14,822 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 17:37:14,822 - INFO -  * Restarting with stat
+2025-06-05 17:37:16,362 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 17:37:16,387 - WARNING -  * Debugger is active!
+2025-06-05 17:37:16,393 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 17:47:34,195 - INFO - 127.0.0.1 - - [05/Jun/2025 17:47:34] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 18:16:01,890 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 18:16:07,184 - INFO -  * Restarting with stat
+2025-06-05 18:16:11,800 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 18:16:11,857 - WARNING -  * Debugger is active!
+2025-06-05 18:16:11,861 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 18:16:15,931 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 18:16:16,071 - INFO -  * Restarting with stat
+2025-06-05 18:16:17,745 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 18:16:17,784 - WARNING -  * Debugger is active!
+2025-06-05 18:16:17,791 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 18:16:27,879 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 18:16:28,094 - INFO -  * Restarting with stat
+2025-06-05 18:16:29,608 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 18:16:29,631 - WARNING -  * Debugger is active!
+2025-06-05 18:16:29,633 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 18:17:31,053 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 18:17:31,204 - INFO -  * Restarting with stat
+2025-06-05 19:00:52,020 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 19:00:52,105 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 19:00:52,105 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 19:00:52,107 - INFO -  * Restarting with stat
+2025-06-05 19:00:53,719 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 19:00:53,758 - WARNING -  * Debugger is active!
+2025-06-05 19:00:53,762 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 19:17:14,688 - INFO - 127.0.0.1 - - [05/Jun/2025 19:17:14] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 19:17:58,915 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\routes.py', reloading
+2025-06-05 19:17:59,099 - INFO -  * Restarting with stat
+2025-06-05 19:18:03,321 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 19:18:03,359 - WARNING -  * Debugger is active!
+2025-06-05 19:18:03,361 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 19:27:51,587 - ERROR - Error al procesar el archivo descargado: [Errno 2] No such file or directory: 'data/forecast_base.xlsx'
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 446, in procesar_forecast
+    calcular_forecast()
+  File "C:\AutoReportV2\backend\app\utils\week_to_friday.py", line 6, in calcular_forecast
+    tabla_raw = pd.read_excel(forecast_temp_path, sheet_name="Data Trx", header=None)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/forecast_base.xlsx'
+2025-06-05 19:27:51,821 - INFO - 127.0.0.1 - - [05/Jun/2025 19:27:51] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 19:39:12,089 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 19:39:17,453 - INFO -  * Restarting with stat
+2025-06-05 19:43:24,753 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 19:43:24,841 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 19:43:24,841 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 19:43:24,841 - INFO -  * Restarting with stat
+2025-06-05 19:43:26,396 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 19:43:26,440 - WARNING -  * Debugger is active!
+2025-06-05 19:43:26,443 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 19:57:37,346 - ERROR - Error al procesar el archivo descargado: ('Lengths must match to compare', (22421,), (3,))
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 446, in procesar_forecast
+    calcular_forecast()
+  File "C:\AutoReportV2\backend\app\utils\week_to_friday.py", line 136, in calcular_forecast
+    (tabla4[country_col] == Country) &
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\arraylike.py", line 40, in __eq__
+    return self._cmp_method(other, operator.eq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 6119, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\ops\array_ops.py", line 321, in comparison_op
+    raise ValueError(
+ValueError: ('Lengths must match to compare', (22421,), (3,))
+2025-06-05 19:57:37,486 - INFO - 127.0.0.1 - - [05/Jun/2025 19:57:37] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 20:04:31,561 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:04:36,759 - INFO -  * Restarting with stat
+2025-06-05 20:04:41,955 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:04:41,991 - WARNING -  * Debugger is active!
+2025-06-05 20:04:42,005 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:04:43,054 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:04:43,193 - INFO -  * Restarting with stat
+2025-06-05 20:07:01,955 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:07:02,021 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 20:07:02,022 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 20:07:02,025 - INFO -  * Restarting with stat
+2025-06-05 20:07:03,833 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:07:03,872 - WARNING -  * Debugger is active!
+2025-06-05 20:07:03,880 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:17:33,691 - ERROR - Error al procesar el archivo descargado: only list-like objects are allowed to be passed to isin(), you passed a `int`
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 446, in procesar_forecast
+    calcular_forecast()
+  File "C:\AutoReportV2\backend\app\utils\week_to_friday.py", line 138, in calcular_forecast
+    (tabla4[month_col].isin(Month)) &
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `int`
+2025-06-05 20:17:33,866 - INFO - 127.0.0.1 - - [05/Jun/2025 20:17:33] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 20:19:40,480 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:19:45,218 - INFO -  * Restarting with stat
+2025-06-05 20:19:48,832 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:19:48,878 - WARNING -  * Debugger is active!
+2025-06-05 20:19:48,881 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:19:53,962 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:19:54,102 - INFO -  * Restarting with stat
+2025-06-05 20:19:55,744 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:19:55,772 - WARNING -  * Debugger is active!
+2025-06-05 20:19:55,778 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:19:56,802 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:19:56,987 - INFO -  * Restarting with stat
+2025-06-05 20:19:58,613 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:19:58,662 - WARNING -  * Debugger is active!
+2025-06-05 20:19:58,668 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:20:42,992 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:20:43,172 - INFO -  * Restarting with stat
+2025-06-05 20:20:44,900 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:20:44,923 - WARNING -  * Debugger is active!
+2025-06-05 20:20:44,929 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:20:57,021 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:20:57,204 - INFO -  * Restarting with stat
+2025-06-05 20:20:58,651 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:20:58,674 - WARNING -  * Debugger is active!
+2025-06-05 20:20:58,678 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:21:00,703 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:21:00,846 - INFO -  * Restarting with stat
+2025-06-05 20:21:02,360 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:21:02,396 - WARNING -  * Debugger is active!
+2025-06-05 20:21:02,400 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:21:06,441 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:21:06,595 - INFO -  * Restarting with stat
+2025-06-05 20:21:08,220 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:21:08,250 - WARNING -  * Debugger is active!
+2025-06-05 20:21:08,254 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:21:10,280 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:21:10,424 - INFO -  * Restarting with stat
+2025-06-05 20:21:11,911 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:21:11,939 - WARNING -  * Debugger is active!
+2025-06-05 20:21:11,942 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:21:17,989 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:21:18,162 - INFO -  * Restarting with stat
+2025-06-05 20:27:12,120 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:27:12,172 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 20:27:12,172 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 20:27:12,177 - INFO -  * Restarting with stat
+2025-06-05 20:27:13,910 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:27:13,929 - WARNING -  * Debugger is active!
+2025-06-05 20:27:13,933 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:37:40,270 - ERROR - Error al procesar el archivo descargado: only list-like objects are allowed to be passed to isin(), you passed a `int`
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 446, in procesar_forecast
+    calcular_forecast()
+  File "C:\AutoReportV2\backend\app\utils\week_to_friday.py", line 138, in calcular_forecast
+    (tabla4[month_col].isin(Month)) &
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `int`
+2025-06-05 20:37:40,392 - INFO - 127.0.0.1 - - [05/Jun/2025 20:37:40] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 20:41:29,158 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:41:34,695 - INFO -  * Restarting with stat
+2025-06-05 20:42:55,772 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:42:55,851 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 20:42:55,851 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 20:42:55,851 - INFO -  * Restarting with stat
+2025-06-05 20:42:57,184 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:42:57,220 - WARNING -  * Debugger is active!
+2025-06-05 20:42:57,221 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:51:58,235 - ERROR - Error al procesar el archivo descargado: [Errno 2] No such file or directory: 'C:\\AutoReportV2\\backend\\app\\data\\forecast_base.xlsm'
+Traceback (most recent call last):
+  File "C:\AutoReportV2\backend\app\routes.py", line 458, in run_process
+    resultado = procesar_forecast(archivo_descargado, forecast_base)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AutoReportV2\backend\app\utils\forecast_processor.py", line 449, in procesar_forecast
+    wb = openpyxl.load_workbook(forecast_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexixJohanOrostegui\AppData\Local\Programs\Python\Python311\Lib\zipfile.py", line 1294, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\AutoReportV2\\backend\\app\\data\\forecast_base.xlsm'
+2025-06-05 20:51:58,411 - INFO - 127.0.0.1 - - [05/Jun/2025 20:51:58] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-05 20:54:06,035 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 20:54:11,384 - INFO -  * Restarting with stat
+2025-06-05 20:54:15,513 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:54:15,541 - WARNING -  * Debugger is active!
+2025-06-05 20:54:15,543 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 20:58:50,336 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 20:58:50,470 - INFO -  * Restarting with stat
+2025-06-05 20:58:54,093 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 20:58:54,128 - WARNING -  * Debugger is active!
+2025-06-05 20:58:54,128 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:00:48,033 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:00:48,244 - INFO -  * Restarting with stat
+2025-06-05 21:01:11,262 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:01:11,298 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 21:01:11,298 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 21:01:11,300 - INFO -  * Restarting with stat
+2025-06-05 21:01:12,724 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:01:12,757 - WARNING -  * Debugger is active!
+2025-06-05 21:01:12,760 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:11:12,436 - INFO - 127.0.0.1 - - [05/Jun/2025 21:11:12] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 21:16:43,027 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:16:49,501 - INFO -  * Restarting with stat
+2025-06-05 21:16:53,933 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:16:53,990 - WARNING -  * Debugger is active!
+2025-06-05 21:16:53,994 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:20:17,515 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:20:17,644 - INFO -  * Restarting with stat
+2025-06-05 21:20:19,365 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:20:19,392 - WARNING -  * Debugger is active!
+2025-06-05 21:20:19,395 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:20:23,434 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:20:23,604 - INFO -  * Restarting with stat
+2025-06-05 21:20:25,300 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:20:25,331 - WARNING -  * Debugger is active!
+2025-06-05 21:20:25,334 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:21:09,635 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:21:09,775 - INFO -  * Restarting with stat
+2025-06-05 21:22:24,365 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:22:24,426 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 21:22:24,426 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 21:22:24,426 - INFO -  * Restarting with stat
+2025-06-05 21:22:26,140 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:22:26,170 - WARNING -  * Debugger is active!
+2025-06-05 21:22:26,173 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:32:46,200 - INFO - 127.0.0.1 - - [05/Jun/2025 21:32:46] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 21:34:47,813 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:34:47,891 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 21:34:47,892 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 21:34:47,894 - INFO -  * Restarting with stat
+2025-06-05 21:34:49,651 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:34:49,681 - WARNING -  * Debugger is active!
+2025-06-05 21:34:49,683 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:36:18,262 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:36:18,471 - INFO -  * Restarting with stat
+2025-06-05 21:36:20,079 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:36:20,102 - WARNING -  * Debugger is active!
+2025-06-05 21:36:20,105 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:36:29,169 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:36:29,303 - INFO -  * Restarting with stat
+2025-06-05 21:36:30,971 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:36:31,007 - WARNING -  * Debugger is active!
+2025-06-05 21:36:31,008 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:47:13,274 - INFO - 127.0.0.1 - - [05/Jun/2025 21:47:13] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 21:49:40,524 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:49:46,615 - INFO -  * Restarting with stat
+2025-06-05 21:49:48,346 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:49:48,383 - WARNING -  * Debugger is active!
+2025-06-05 21:49:48,386 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:49:50,414 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:49:50,557 - INFO -  * Restarting with stat
+2025-06-05 21:49:54,026 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:49:54,064 - WARNING -  * Debugger is active!
+2025-06-05 21:49:54,066 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:49:55,104 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:49:55,273 - INFO -  * Restarting with stat
+2025-06-05 21:49:57,345 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:49:57,392 - WARNING -  * Debugger is active!
+2025-06-05 21:49:57,395 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:49:59,434 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:49:59,582 - INFO -  * Restarting with stat
+2025-06-05 21:50:01,973 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:02,017 - WARNING -  * Debugger is active!
+2025-06-05 21:50:02,024 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:50:26,225 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:50:26,384 - INFO -  * Restarting with stat
+2025-06-05 21:50:28,022 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:28,052 - WARNING -  * Debugger is active!
+2025-06-05 21:50:28,053 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:50:29,077 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:50:29,218 - INFO -  * Restarting with stat
+2025-06-05 21:50:30,783 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:30,822 - WARNING -  * Debugger is active!
+2025-06-05 21:50:30,827 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:50:38,898 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-05 21:50:39,064 - INFO -  * Restarting with stat
+2025-06-05 21:50:40,904 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:40,941 - WARNING -  * Debugger is active!
+2025-06-05 21:50:40,943 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:50:49,013 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:50:49,143 - INFO -  * Restarting with stat
+2025-06-05 21:50:50,626 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:50,654 - WARNING -  * Debugger is active!
+2025-06-05 21:50:50,658 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:50:51,683 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:50:51,826 - INFO -  * Restarting with stat
+2025-06-05 21:50:53,444 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:50:53,474 - WARNING -  * Debugger is active!
+2025-06-05 21:50:53,477 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:02,544 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:02,702 - INFO -  * Restarting with stat
+2025-06-05 21:51:04,193 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:04,232 - WARNING -  * Debugger is active!
+2025-06-05 21:51:04,235 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:10,280 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:10,432 - INFO -  * Restarting with stat
+2025-06-05 21:51:11,946 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:11,980 - WARNING -  * Debugger is active!
+2025-06-05 21:51:11,984 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:15,014 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:15,174 - INFO -  * Restarting with stat
+2025-06-05 21:51:16,668 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:16,711 - WARNING -  * Debugger is active!
+2025-06-05 21:51:16,714 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:18,737 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:18,887 - INFO -  * Restarting with stat
+2025-06-05 21:51:20,562 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:20,598 - WARNING -  * Debugger is active!
+2025-06-05 21:51:20,602 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:24,643 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:24,782 - INFO -  * Restarting with stat
+2025-06-05 21:51:26,494 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:26,530 - WARNING -  * Debugger is active!
+2025-06-05 21:51:26,534 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:30,570 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:30,724 - INFO -  * Restarting with stat
+2025-06-05 21:51:32,573 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:32,612 - WARNING -  * Debugger is active!
+2025-06-05 21:51:32,613 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:35,644 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:35,779 - INFO -  * Restarting with stat
+2025-06-05 21:51:37,222 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:37,255 - WARNING -  * Debugger is active!
+2025-06-05 21:51:37,261 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:45,309 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:45,451 - INFO -  * Restarting with stat
+2025-06-05 21:51:46,908 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:46,931 - WARNING -  * Debugger is active!
+2025-06-05 21:51:46,934 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:48,993 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:49,115 - INFO -  * Restarting with stat
+2025-06-05 21:51:50,733 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:50,771 - WARNING -  * Debugger is active!
+2025-06-05 21:51:50,774 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:55,820 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:55,964 - INFO -  * Restarting with stat
+2025-06-05 21:51:57,554 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:51:57,591 - WARNING -  * Debugger is active!
+2025-06-05 21:51:57,594 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:51:59,624 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:51:59,763 - INFO -  * Restarting with stat
+2025-06-05 21:52:01,242 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:01,264 - WARNING -  * Debugger is active!
+2025-06-05 21:52:01,274 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:03,304 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:03,473 - INFO -  * Restarting with stat
+2025-06-05 21:52:05,259 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:05,286 - WARNING -  * Debugger is active!
+2025-06-05 21:52:05,292 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:06,314 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:06,440 - INFO -  * Restarting with stat
+2025-06-05 21:52:07,963 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:07,998 - WARNING -  * Debugger is active!
+2025-06-05 21:52:08,002 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:11,041 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:11,206 - INFO -  * Restarting with stat
+2025-06-05 21:52:12,904 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:12,939 - WARNING -  * Debugger is active!
+2025-06-05 21:52:12,943 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:13,968 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:14,143 - INFO -  * Restarting with stat
+2025-06-05 21:52:15,850 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:15,890 - WARNING -  * Debugger is active!
+2025-06-05 21:52:15,894 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:16,918 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:17,083 - INFO -  * Restarting with stat
+2025-06-05 21:52:18,804 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:18,840 - WARNING -  * Debugger is active!
+2025-06-05 21:52:18,844 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:22,904 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:23,062 - INFO -  * Restarting with stat
+2025-06-05 21:52:24,650 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:24,684 - WARNING -  * Debugger is active!
+2025-06-05 21:52:24,688 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:26,722 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:26,880 - INFO -  * Restarting with stat
+2025-06-05 21:52:28,502 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:28,532 - WARNING -  * Debugger is active!
+2025-06-05 21:52:28,536 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:29,557 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:29,726 - INFO -  * Restarting with stat
+2025-06-05 21:52:31,318 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:31,358 - WARNING -  * Debugger is active!
+2025-06-05 21:52:31,362 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:32,388 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:32,532 - INFO -  * Restarting with stat
+2025-06-05 21:52:34,270 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:34,310 - WARNING -  * Debugger is active!
+2025-06-05 21:52:34,314 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:37,354 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:37,482 - INFO -  * Restarting with stat
+2025-06-05 21:52:39,064 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:39,096 - WARNING -  * Debugger is active!
+2025-06-05 21:52:39,099 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:40,120 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:40,246 - INFO -  * Restarting with stat
+2025-06-05 21:52:42,014 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:42,048 - WARNING -  * Debugger is active!
+2025-06-05 21:52:42,052 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:44,079 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:44,227 - INFO -  * Restarting with stat
+2025-06-05 21:52:45,953 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:45,985 - WARNING -  * Debugger is active!
+2025-06-05 21:52:45,994 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:47,021 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:47,164 - INFO -  * Restarting with stat
+2025-06-05 21:52:48,772 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:48,794 - WARNING -  * Debugger is active!
+2025-06-05 21:52:48,803 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:49,824 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:49,973 - INFO -  * Restarting with stat
+2025-06-05 21:52:51,703 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:51,733 - WARNING -  * Debugger is active!
+2025-06-05 21:52:51,738 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:52,764 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:52,929 - INFO -  * Restarting with stat
+2025-06-05 21:52:54,640 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:54,682 - WARNING -  * Debugger is active!
+2025-06-05 21:52:54,686 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:52:57,720 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:52:57,882 - INFO -  * Restarting with stat
+2025-06-05 21:52:59,630 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:52:59,659 - WARNING -  * Debugger is active!
+2025-06-05 21:52:59,662 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:00,683 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:00,872 - INFO -  * Restarting with stat
+2025-06-05 21:53:02,374 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:02,412 - WARNING -  * Debugger is active!
+2025-06-05 21:53:02,417 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:04,463 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:04,623 - INFO -  * Restarting with stat
+2025-06-05 21:53:06,448 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:06,495 - WARNING -  * Debugger is active!
+2025-06-05 21:53:06,502 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:36,709 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:36,933 - INFO -  * Restarting with stat
+2025-06-05 21:53:38,536 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:38,556 - WARNING -  * Debugger is active!
+2025-06-05 21:53:38,558 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:44,604 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:44,792 - INFO -  * Restarting with stat
+2025-06-05 21:53:46,273 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:46,299 - WARNING -  * Debugger is active!
+2025-06-05 21:53:46,302 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:47,320 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:47,473 - INFO -  * Restarting with stat
+2025-06-05 21:53:49,004 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:49,032 - WARNING -  * Debugger is active!
+2025-06-05 21:53:49,035 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:51,068 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:51,223 - INFO -  * Restarting with stat
+2025-06-05 21:53:52,704 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:52,722 - WARNING -  * Debugger is active!
+2025-06-05 21:53:52,733 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:53:53,757 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:53:53,908 - INFO -  * Restarting with stat
+2025-06-05 21:53:55,530 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:53:55,552 - WARNING -  * Debugger is active!
+2025-06-05 21:53:55,565 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:59:35,570 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:59:35,724 - INFO -  * Restarting with stat
+2025-06-05 21:59:39,650 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:59:39,690 - WARNING -  * Debugger is active!
+2025-06-05 21:59:39,695 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:59:40,744 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:59:40,889 - INFO -  * Restarting with stat
+2025-06-05 21:59:42,458 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:59:42,532 - WARNING -  * Debugger is active!
+2025-06-05 21:59:42,534 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 21:59:44,564 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 21:59:44,713 - INFO -  * Restarting with stat
+2025-06-05 21:59:46,282 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 21:59:46,317 - WARNING -  * Debugger is active!
+2025-06-05 21:59:46,319 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:10:44,595 - INFO - 127.0.0.1 - - [05/Jun/2025 22:10:44] "POST /run-process HTTP/1.1" 200 -
+2025-06-05 22:12:24,966 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:12:31,057 - INFO -  * Restarting with stat
+2025-06-05 22:12:32,824 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:12:32,862 - WARNING -  * Debugger is active!
+2025-06-05 22:12:32,864 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:12:37,903 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:12:38,055 - INFO -  * Restarting with stat
+2025-06-05 22:12:39,702 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:12:39,739 - WARNING -  * Debugger is active!
+2025-06-05 22:12:39,742 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:12:41,773 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:12:41,935 - INFO -  * Restarting with stat
+2025-06-05 22:12:43,444 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:12:43,474 - WARNING -  * Debugger is active!
+2025-06-05 22:12:43,482 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:13:48,960 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:13:49,103 - INFO -  * Restarting with stat
+2025-06-05 22:13:52,946 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:13:52,979 - WARNING -  * Debugger is active!
+2025-06-05 22:13:52,983 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:00,066 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:00,215 - INFO -  * Restarting with stat
+2025-06-05 22:14:01,750 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:01,771 - WARNING -  * Debugger is active!
+2025-06-05 22:14:01,773 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:18,869 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:19,007 - INFO -  * Restarting with stat
+2025-06-05 22:14:20,539 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:20,558 - WARNING -  * Debugger is active!
+2025-06-05 22:14:20,560 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:22,584 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:22,726 - INFO -  * Restarting with stat
+2025-06-05 22:14:24,330 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:24,364 - WARNING -  * Debugger is active!
+2025-06-05 22:14:24,367 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:26,395 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:26,533 - INFO -  * Restarting with stat
+2025-06-05 22:14:28,019 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:28,054 - WARNING -  * Debugger is active!
+2025-06-05 22:14:28,057 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:33,093 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:33,261 - INFO -  * Restarting with stat
+2025-06-05 22:14:34,740 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:34,771 - WARNING -  * Debugger is active!
+2025-06-05 22:14:34,774 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:40,820 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:40,957 - INFO -  * Restarting with stat
+2025-06-05 22:14:42,423 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:42,445 - WARNING -  * Debugger is active!
+2025-06-05 22:14:42,447 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:45,474 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:45,625 - INFO -  * Restarting with stat
+2025-06-05 22:14:47,170 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:47,203 - WARNING -  * Debugger is active!
+2025-06-05 22:14:47,206 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:14:53,250 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:14:53,407 - INFO -  * Restarting with stat
+2025-06-05 22:14:54,966 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:14:55,007 - WARNING -  * Debugger is active!
+2025-06-05 22:14:55,010 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:00,051 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:00,208 - INFO -  * Restarting with stat
+2025-06-05 22:15:01,727 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:01,756 - WARNING -  * Debugger is active!
+2025-06-05 22:15:01,759 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:04,788 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:04,968 - INFO -  * Restarting with stat
+2025-06-05 22:15:06,475 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:06,504 - WARNING -  * Debugger is active!
+2025-06-05 22:15:06,506 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:16,571 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:16,711 - INFO -  * Restarting with stat
+2025-06-05 22:15:18,297 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:18,335 - WARNING -  * Debugger is active!
+2025-06-05 22:15:18,338 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:20,366 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:20,518 - INFO -  * Restarting with stat
+2025-06-05 22:15:21,911 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:21,943 - WARNING -  * Debugger is active!
+2025-06-05 22:15:21,947 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:22,969 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:23,131 - INFO -  * Restarting with stat
+2025-06-05 22:15:24,601 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:24,627 - WARNING -  * Debugger is active!
+2025-06-05 22:15:24,630 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:32,692 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:32,822 - INFO -  * Restarting with stat
+2025-06-05 22:15:34,385 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:34,420 - WARNING -  * Debugger is active!
+2025-06-05 22:15:34,424 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:36,452 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:36,618 - INFO -  * Restarting with stat
+2025-06-05 22:15:38,194 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:38,223 - WARNING -  * Debugger is active!
+2025-06-05 22:15:38,226 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:44,273 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:44,405 - INFO -  * Restarting with stat
+2025-06-05 22:15:45,941 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:45,960 - WARNING -  * Debugger is active!
+2025-06-05 22:15:45,963 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:54,035 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:54,181 - INFO -  * Restarting with stat
+2025-06-05 22:15:55,771 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:55,798 - WARNING -  * Debugger is active!
+2025-06-05 22:15:55,801 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:15:56,825 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:15:56,963 - INFO -  * Restarting with stat
+2025-06-05 22:15:58,506 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:15:58,533 - WARNING -  * Debugger is active!
+2025-06-05 22:15:58,536 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:16:00,561 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:16:00,694 - INFO -  * Restarting with stat
+2025-06-05 22:16:02,202 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:16:02,232 - WARNING -  * Debugger is active!
+2025-06-05 22:16:02,235 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:16:03,264 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:16:03,408 - INFO -  * Restarting with stat
+2025-06-05 22:16:04,974 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:16:05,001 - WARNING -  * Debugger is active!
+2025-06-05 22:16:05,004 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:16:07,032 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-05 22:16:07,164 - INFO -  * Restarting with stat
+2025-06-05 22:16:08,989 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-05 22:16:09,034 - WARNING -  * Debugger is active!
+2025-06-05 22:16:09,036 - INFO -  * Debugger PIN: 259-138-747
+2025-06-05 22:25:34,856 - INFO - 127.0.0.1 - - [05/Jun/2025 22:25:34] "POST /run-process HTTP/1.1" 200 -
+2025-06-06 12:23:29,517 - INFO - 127.0.0.1 - - [06/Jun/2025 12:23:29] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-06 12:23:38,676 - INFO - 127.0.0.1 - - [06/Jun/2025 12:23:38] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
