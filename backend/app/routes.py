@@ -1,4 +1,5 @@
-from flask import Blueprint, request, send_file, jsonify
+import json
+from flask import Blueprint, app, request, send_file, jsonify
 import os
 import time
 import logging
@@ -12,8 +13,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from openpyxl.utils.dataframe import dataframe_to_rows
-
 from .utils.forecast_processor import procesar_forecast
+from .utils.Summary import Summary
 
 # Configuración de logging
 logging.basicConfig(
@@ -26,6 +27,7 @@ logging.basicConfig(
 )
 
 main = Blueprint('main', __name__)
+
 
 # Configuración de rutas
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -144,6 +146,30 @@ def process_budget():
             "details": str(e),
             "step": "Ver logs para ver el último paso ejecutado antes del error"
         }), 500
+
+from flask import Blueprint, jsonify
+
+main = Blueprint('main', __name__)
+
+@main.route('/api/summary', methods=['GET'])
+def summary():
+    try:
+        file_path = os.path.join('app', 'summary.json')
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": f"No se pudo leer el archivo: {str(e)}"}), 500
+    
+@main.route('/api/resultado', methods=['GET'])
+def calcular_forecast():
+    try:
+        file_path = os.path.join('app', 'resultado.json')
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": f"No se pudo leer el archivo: {str(e)}"}), 500
 
 
 def wait_for_download(timeout=120):
@@ -311,6 +337,9 @@ def run_process():
             EC.element_to_be_clickable((By.XPATH, '//*[@id="hal__dom__uniqueID__170"]/td/div'))
         ).click()#Classification Name
         WebDriverWait(driver, 90).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="hal__dom__uniqueID__171"]/td/div'))
+        ).click()#Classification Code
+        WebDriverWait(driver, 90).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="hal__dom__uniqueID__172"]/td/div'))
         ).click()#Term
         WebDriverWait(driver, 90).until(
@@ -348,7 +377,7 @@ def run_process():
         ).click()#Opp Identifier
         WebDriverWait(driver, 90).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="hal__dom__uniqueID__184"]/td/div'))
-        ).click()#Opp Creator Name
+        ).click()#Opp Creator email
         WebDriverWait(driver, 90).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="hal__dom__uniqueID__185"]/td/div'))
         ).click()#Opp Next Step

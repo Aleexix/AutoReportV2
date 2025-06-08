@@ -7,6 +7,8 @@ import shutil
 import numpy as np
 from openpyxl.utils import get_column_letter, column_index_from_string
 from app.utils.week_to_friday import calcular_forecast
+from app.utils.Summary import Summary
+
 pd.set_option('future.no_silent_downcasting', True) 
 
 def procesar_forecast( epm_file_path, forecast_base_path):
@@ -439,7 +441,7 @@ def procesar_forecast( epm_file_path, forecast_base_path):
     print(f"6. Ruta base: {BASE_DIR}")
     print(f"7. Ruta forecast: {forecast_path}")
 
-    if datetime.today().weekday() == 3: # 0 = lunes
+    if datetime.today().weekday() == 0: # 0 = lunes
         print("📅 Hoy es lunes, iniciando forecast...")
 
         # Llama a la función que genera el archivo JSON
@@ -467,16 +469,16 @@ def procesar_forecast( epm_file_path, forecast_base_path):
             "Cognitive_Colombia-Venezuela-LCR_3": "P16",
             "Storage HW-Storage TPS_Colombia-Venezuela-LCR_1": "N17",
             "Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2": "O17",
-            "Storage HW-Storage TPS_Colombia-Venezuela_LCR_3": "P17",
-            "Storage HW_Colombia-Venezuela_LCR_1": "N18",
-            "Storage HW_Colombia-Venezuela_LCR_1-2": "O18",
-            "Storage HW_Colombia-Venezuela_LCR_3": "P18",
-            "Storage TPS_Colombia-Venezuela_LCR_1": "N19",
-            "Storage TPS_Colombia-Venezuela_LCR_1-2": "O19",
-            "Storage TPS_Colombia-Venezuela_LCR_3": "P19",
-            "Z Middleware_Colombia-Venezuela_LCR_1": "N20",
-            "Z Middleware_Colombia-Venezuela_LCR_1-2": "O20",
-            "Z Middleware_Colombia-Venezuela_LCR_3": "P20",
+            "Storage HW-Storage TPS_Colombia-Venezuela-LCR_3": "P17",
+            "Storage HW_Colombia-Venezuela-LCR_1": "N18",
+            "Storage HW_Colombia-Venezuela-LCR_1-2": "O18",
+            "Storage HW_Colombia-Venezuela-LCR_3": "P18",
+            "Storage TPS_Colombia-Venezuela-LCR_1": "N19",
+            "Storage TPS_Colombia-Venezuela-LCR_1-2": "O19",
+            "Storage TPS_Colombia-Venezuela-LCR_3": "P19",
+            "Z Middleware_Colombia-Venezuela-LCR_1": "N20",
+            "Z Middleware_Colombia-Venezuela-LCR_1-2": "O20",
+            "Z Middleware_Colombia-Venezuela-LCR_3": "P20",
             "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_1": "N21",
             "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_1-2": "O21",
             "Mainframe-Cognitive-Storage HW-Storage TPS-Z Middleware_Colombia-Venezuela-LCR_3": "P21",
@@ -484,7 +486,7 @@ def procesar_forecast( epm_file_path, forecast_base_path):
             # COLOMBIA
             "Mainframe-Cognitive_Colombia_1": "N23",
             "Mainframe-Cognitive_Colombia_1-2": "O23",
-            "Mainframe-Cognitive_Colombia_1-2": "P23",
+            "Mainframe-Cognitive_Colombia_3": "P23",
             "Mainframe_Colombia_1": "N24",
             "Mainframe_Colombia_1-2": "O24",
             "Mainframe_Colombia_3": "P24",
@@ -573,11 +575,12 @@ def procesar_forecast( epm_file_path, forecast_base_path):
     else:
         print("⛔ No es lunes, no se actualiza forecast.")
 
+    Summary()
 
     if os.path.exists(output_path):
         os.remove(output_path)
         print(f"🗑️ Eliminado: {output_path}")
-
+    
     if os.path.exists(temp_copy_path):
         os.remove(temp_copy_path)
         print(f"🗑️ Eliminado: {temp_copy_path}")

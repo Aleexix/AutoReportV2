@@ -161,7 +161,7 @@ def calcular_forecast(forecast_temp_path= "app/temp/Systems HW - North SSA EPM I
         data[clave] = valor
 
     # Solo guarda si es viernes
-    if datetime.today().weekday() == 3:  # 4 = viernes
+    if datetime.today().weekday() == 4:  # 4 = viernes
         with open("app/resultado.json", "w") as f:
             json.dump(data, f, indent=2)
         print("✅ Resultado guardado en app/resultado.json (viernes)")
