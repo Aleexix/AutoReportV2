@@ -32,11 +32,11 @@ const powerData = {
   usd: summaryData['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
   m1: summaryData['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
   m2: summaryData['Cognitive_Colombia-Venezuela-LCR_1-2'] || 0,
-  m3: summaryData['Cognitive_Colombia-Venezuela-LCR_3'] || 0,
+  m3: summaryData['Cognitive_Colombia-Venezuela-LCR_1-2-3'] || 0,
   lastWeekValues: {
     m1: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
     m2: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_1-2'] || 0,
-    m3: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_3'] || 0
+    m3: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_1-2-3'] || 0
   }
 };
 
@@ -44,11 +44,11 @@ const storageData = {
   usd: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
   m1: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
   m2: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2'] || 0,
-  m3: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_3'] || 0,
+  m3: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2-3'] || 0,
   lastWeekValues: {
     m1: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
     m2: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2'] || 0,
-    m3: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_3'] || 0
+    m3: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2-3'] || 0
   }
 };
 
@@ -56,11 +56,11 @@ const zData = {
   usd: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
   m1: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
   m2: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2'] || 0,
-  m3: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_3'] || 0,
-  lastWeekValues: {
+  m3: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2-3'] || 0,
+   lastWeekValues: {
     m1: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
     m2: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2'] || 0,
-    m3: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_3'] || 0
+    m3: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2-3'] || 0
   }
 };
   
@@ -241,8 +241,8 @@ const zData = {
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <Card title="POWER" m1={powerData.m1} m2={powerData.m2} m3={powerData.m3} lastWeekValues={powerData.lastWeekValues}   />
-            <Card title="STORAGE" m1={storageData.m1} m2={storageData.m2} m3={storageData.m3} lastWeekValues={powerData.lastWeekValues}   />
-            <Card title="TOTAL Z" m1={zData.m1} m2={zData.m2} m3={zData.m3} lastWeekValues={powerData.lastWeekValues}  />
+            <Card title="STORAGE" m1={storageData.m1} m2={storageData.m2} m3={storageData.m3} lastWeekValues={storageData.lastWeekValues}   />
+            <Card title="TOTAL Z" m1={zData.m1} m2={zData.m2} m3={zData.m3} lastWeekValues={zData.lastWeekValues}  />
     </div>
         </div>
       </section>

@@ -33,8 +33,6 @@ const Card: React.FC<CardProps> = ({ title, m1, m2, m3, lastWeekValues }) => {
                        lastWeekValues.m3;
 
   // Cálculo de diferencias
-  const monthlyDiff = m3 - m1;
-  const isMonthlyUp = m3 >= m1;
   const w2wDiff = currentValue - lastWeekValue;
   const isW2WUp = w2wDiff >= 0;
 
