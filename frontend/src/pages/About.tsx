@@ -34,9 +34,9 @@ const About = () => {
                     {/* Imágenes de estrellas responsivas */}
                     <img className="hidden md:block absolute top-52 right-24 z-10 w-12 h-12 object-contain" src="src/assets/Images/star.svg" alt="" />
                     <img className="hidden md:block absolute top-80 right-32 z-10 w-12 h-12 object-contain" src="src/assets/Images/star2.svg" alt="" />
-                    
+
                     <div className="md:max-w-xl text-center mx-auto mb-12 mt-8">
-                
+
                         <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
                             {language === 'es' ? 'Sobre Nosotros' : 'About Us'}
                         </span>
@@ -46,10 +46,10 @@ const About = () => {
                     </div>
 
                     {/* Imagen de fondo responsiva */}
-                    <img 
-                        className="absolute bottom-0  right-0" 
-                        src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/assets/Images/Group_1.svg'}`} 
-                        alt="" 
+                    <img
+                        className="absolute bottom-0  right-0"
+                        src={`${darkMode ? 'src/assets/Images/lines2.svg' : 'src/assets/Images/Group_1.svg'}`}
+                        alt=""
                     />
 
                     <div className="max-w-5xl mx-auto">
@@ -57,10 +57,10 @@ const About = () => {
                             {/* Imagen principal responsiva */}
                             <div className="w-full md:w-1/2 p-4 lg:p-12">
                                 <div className="max-w-full mx-auto">
-                                    <img 
-                                        className="rounded-3xl w-full h-auto object-cover" 
-                                        src="src/assets/Images/freepik__background__77229.png" 
-                                        alt="" 
+                                    <img
+                                        className="rounded-3xl w-full h-auto object-cover"
+                                        src="src/assets/Images/freepik__background__77229.png"
+                                        alt=""
                                     />
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ const About = () => {
                                 <p className={`mb-8 text-opacity-60 w-full max-w-md ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                                     {language === 'es' ? 'Hola! nosotros somos practicantes de IBM en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion en la unidad, ' : 'Hello! We are IBM interns in the sales unit in 2025. This project stems from a need for automation in the unit,'}
                                 </p>
-                                
+
                                 {/* Lógica de expandir/contraer texto */}
                                 {!isExpanded ? (
                                     <a
@@ -183,7 +183,7 @@ const About = () => {
             {/* Sección de Equipo */}
             <section className={`relative pb-24 overflow-hidden ${darkMode ? 'bg-body' : 'bg-white'}`}>
                 <div className="container px-4 mx-auto">
-                    <div className="mb-20 md:max-w-xl text-center mx-auto">
+                    <div className="mb-10 md:max-w-xl text-center mx-auto">
                         <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
                             {language === 'es' ? 'nuestro equipo' : 'Our Team'}
                         </span>
@@ -194,27 +194,25 @@ const About = () => {
                     <div className="flex flex-wrap justify-center items-center text-center -m-4">
                         <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
                             <div className="text-center">
-                                <img className="mb-6 mx-auto w-32 h-32 object-contain" src="src/assets/Images/user-svgrepo-com.svg" alt="Imagen de alexix CEO de el software" />
-                                <span className={`inline-block mb-2 text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                <img
+                                    className="mb-6 mx-auto w-72 h-72 rounded-full object-cover"
+                                    src="src/assets/Images/Team.jpg"
+                                    alt="Imagen de Alexix CEO de el software"
+                                />
+                                <span
+                                    className={`inline-block mb-2 text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}
+                                >
                                     FullStack and CEO at AutoReport
                                 </span>
-                                <h3 className={`text-2xl md:text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                                    Alexix Orostegui
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-                            <div className="text-center">
-                                <img className="mb-6 mx-auto w-32 h-32 object-contain" src="src/assets/Images/user-svgrepo-com.svg" alt="Imagen de Jhon" />
-                                <span className={`inline-block mb-2 text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                                    FullStack
-                                </span>
-                                <h3 className={`text-2xl md:text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                                    Jhon Cufiño
+                                <h3
+                                    className={`text-2xl md:text-3xl ${darkMode ? 'text-white' : 'text-black'}`}
+                                >
+                                    Team
                                 </h3>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </>

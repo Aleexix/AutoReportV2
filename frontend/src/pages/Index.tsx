@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../Global.css";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext } from "../context/LanguageProvider";
 import { toast } from "react-toastify";
@@ -10,6 +10,59 @@ import Card from "../components/Grafica";
 const Index: React.FC = () => {
   const themeContext = useContext(ThemeContext);
   const languageContext = useContext(LanguageContext);
+  const [summaryData, setSummaryData] = useState<any>(null);
+  const [resultadoData, setresultadoData] = useState<any>(null);
+
+ useEffect(() => {
+  fetch('http://localhost:5000/api/summary')
+    .then((res) => res.json())
+    .then((data) => setSummaryData(data))
+    .catch((err) => console.error('❌ Error al obtener datos:', err));
+  fetch('http://localhost:5000/api/resultado')
+    .then((res) => res.json())
+    .then((data) => setresultadoData(data))
+    .catch((err) => console.error('❌ Error al obtener datos:', err));
+  }, []);
+
+if (!summaryData) return <p>Cargando datos...</p>;
+
+// 💡 Construcción de datos para cada tarjeta con nombres completos
+
+const powerData = {
+  usd: summaryData['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
+  m1: summaryData['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
+  m2: summaryData['Cognitive_Colombia-Venezuela-LCR_1-2'] || 0,
+  m3: summaryData['Cognitive_Colombia-Venezuela-LCR_3'] || 0,
+  lastWeekValues: {
+    m1: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_1'] || 0,
+    m2: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_1-2'] || 0,
+    m3: resultadoData?.['Cognitive_Colombia-Venezuela-LCR_3'] || 0
+  }
+};
+
+const storageData = {
+  usd: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
+  m1: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
+  m2: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2'] || 0,
+  m3: summaryData['Storage HW-Storage TPS_Colombia-Venezuela-LCR_3'] || 0,
+  lastWeekValues: {
+    m1: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1'] || 0,
+    m2: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_1-2'] || 0,
+    m3: resultadoData?.['Storage HW-Storage TPS_Colombia-Venezuela-LCR_3'] || 0
+  }
+};
+
+const zData = {
+  usd: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
+  m1: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
+  m2: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2'] || 0,
+  m3: summaryData['Mainframe-Z Middleware_Colombia-Venezuela-LCR_3'] || 0,
+  lastWeekValues: {
+    m1: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1'] || 0,
+    m2: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_1-2'] || 0,
+    m3: resultadoData?.['Mainframe-Z Middleware_Colombia-Venezuela-LCR_3'] || 0
+  }
+};
   
   if (!themeContext) {
     throw new Error("Index debe estar dentro de un ThemeProvider");
@@ -63,6 +116,7 @@ const Index: React.FC = () => {
         autoClose: 5000,
       });
     }
+    
   };
 
   return (
@@ -186,10 +240,10 @@ const Index: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <Card title="POWER" usd={0.74} w2w={-0.5} diff={0.24} direction="up" />
-            <Card title="STORAGE" usd={1.24} w2w={0.2} diff={-0.18} direction="down" />
-            <Card title="TOTAL Z" usd={0.95} w2w={0.1} diff={0.15} direction="up" />
-          </div>
+            <Card title="POWER" m1={powerData.m1} m2={powerData.m2} m3={powerData.m3} lastWeekValues={powerData.lastWeekValues}   />
+            <Card title="STORAGE" m1={storageData.m1} m2={storageData.m2} m3={storageData.m3} lastWeekValues={powerData.lastWeekValues}   />
+            <Card title="TOTAL Z" m1={zData.m1} m2={zData.m2} m3={zData.m3} lastWeekValues={powerData.lastWeekValues}  />
+    </div>
         </div>
       </section>
     </>
