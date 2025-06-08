@@ -24,17 +24,17 @@ def Summary(forecast_temp_path= "app/temp/Systems HW - North SSA EPM ISC.xlsm"):
         #Power
         (["Cognitive"], ["Colombia","Venezuela","LCR"], 1),
         (["Cognitive"], ["Colombia","Venezuela","LCR"], [1, 2]),
-        (["Cognitive"], ["Colombia","Venezuela","LCR"], 3),
+        (["Cognitive"], ["Colombia","Venezuela","LCR"], [1,2, 3]),
 
         #Storage CVL
         (["Storage HW", "Storage TPS"], ["Colombia","Venezuela","LCR"], 1),
         (["Storage HW", "Storage TPS"], ["Colombia","Venezuela","LCR"], [1, 2]),
-        (["Storage HW", "Storage TPS"], ["Colombia","Venezuela","LCR"], 3),
+        (["Storage HW", "Storage TPS"], ["Colombia","Venezuela","LCR"], [1,2,3]),
 
         #Z CVL
         (["Mainframe", "Z Middleware"], ["Colombia","Venezuela","LCR"], 1),
         (["Mainframe", "Z Middleware"], ["Colombia","Venezuela","LCR"], [1, 2]),
-        (["Mainframe", "Z Middleware"], ["Colombia","Venezuela","LCR"], 3),
+        (["Mainframe", "Z Middleware"], ["Colombia","Venezuela","LCR"], [1, 2, 3]),
 
 
 

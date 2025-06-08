@@ -5415,3 +5415,119 @@ IndexError: index 13 is out of bounds for axis 0 with size 11
 2025-06-08 01:39:59,509 - INFO - 127.0.0.1 - - [08/Jun/2025 01:39:59] "GET /api/summary HTTP/1.1" 200 -
 2025-06-08 01:39:59,528 - INFO - 127.0.0.1 - - [08/Jun/2025 01:39:59] "GET /api/resultado HTTP/1.1" 200 -
 2025-06-08 01:39:59,843 - INFO - 127.0.0.1 - - [08/Jun/2025 01:39:59] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 12:59:55,269 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 12:59:55,367 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-08 12:59:55,367 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 12:59:55,367 - INFO -  * Restarting with stat
+2025-06-08 12:59:56,907 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 12:59:56,937 - WARNING -  * Debugger is active!
+2025-06-08 12:59:56,954 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 13:00:04,878 - INFO - 127.0.0.1 - - [08/Jun/2025 13:00:04] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:00:04,878 - INFO - 127.0.0.1 - - [08/Jun/2025 13:00:04] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:00:05,090 - INFO - 127.0.0.1 - - [08/Jun/2025 13:00:05] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:00:05,188 - INFO - 127.0.0.1 - - [08/Jun/2025 13:00:05] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:04:48,053 - INFO - 127.0.0.1 - - [08/Jun/2025 13:04:48] "[35m[1mPOST /run-process HTTP/1.1[0m" 500 -
+2025-06-08 13:20:37,212 - INFO - 127.0.0.1 - - [08/Jun/2025 13:20:37] "POST /run-process HTTP/1.1" 200 -
+2025-06-08 13:22:22,351 - INFO - 127.0.0.1 - - [08/Jun/2025 13:22:22] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:22:22,368 - INFO - 127.0.0.1 - - [08/Jun/2025 13:22:22] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:22:22,602 - INFO - 127.0.0.1 - - [08/Jun/2025 13:22:22] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:22:22,669 - INFO - 127.0.0.1 - - [08/Jun/2025 13:22:22] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:28:32,735 - INFO - 127.0.0.1 - - [08/Jun/2025 13:28:32] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:28:32,755 - INFO - 127.0.0.1 - - [08/Jun/2025 13:28:32] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:28:32,993 - INFO - 127.0.0.1 - - [08/Jun/2025 13:28:32] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:28:33,052 - INFO - 127.0.0.1 - - [08/Jun/2025 13:28:33] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:29:41,049 - INFO - 127.0.0.1 - - [08/Jun/2025 13:29:41] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:29:41,049 - INFO - 127.0.0.1 - - [08/Jun/2025 13:29:41] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:29:41,312 - INFO - 127.0.0.1 - - [08/Jun/2025 13:29:41] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 13:29:41,370 - INFO - 127.0.0.1 - - [08/Jun/2025 13:29:41] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 13:31:20,908 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\Summary.py', reloading
+2025-06-08 13:31:26,098 - INFO -  * Restarting with stat
+2025-06-08 13:31:30,727 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 13:31:30,774 - WARNING -  * Debugger is active!
+2025-06-08 13:31:30,780 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 13:34:52,403 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\Summary.py', reloading
+2025-06-08 13:34:52,594 - INFO -  * Restarting with stat
+2025-06-08 13:34:56,896 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 13:34:56,920 - WARNING -  * Debugger is active!
+2025-06-08 13:34:56,926 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 13:34:57,972 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\Summary.py', reloading
+2025-06-08 13:34:58,122 - INFO -  * Restarting with stat
+2025-06-08 13:34:59,377 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 13:34:59,398 - WARNING -  * Debugger is active!
+2025-06-08 13:34:59,401 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 13:35:03,447 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\Summary.py', reloading
+2025-06-08 13:35:03,597 - INFO -  * Restarting with stat
+2025-06-08 14:27:24,487 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 14:27:24,542 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-08 14:27:24,542 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 14:27:24,553 - INFO -  * Restarting with stat
+2025-06-08 14:27:25,811 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 14:27:25,844 - WARNING -  * Debugger is active!
+2025-06-08 14:27:25,844 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 14:27:52,687 - INFO - 127.0.0.1 - - [08/Jun/2025 14:27:52] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:27:52,687 - INFO - 127.0.0.1 - - [08/Jun/2025 14:27:52] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:27:52,932 - INFO - 127.0.0.1 - - [08/Jun/2025 14:27:52] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:27:53,004 - INFO - 127.0.0.1 - - [08/Jun/2025 14:27:53] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:43:26,796 - INFO - 127.0.0.1 - - [08/Jun/2025 14:43:26] "POST /run-process HTTP/1.1" 200 -
+2025-06-08 14:44:10,801 - INFO - 127.0.0.1 - - [08/Jun/2025 14:44:10] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:44:10,808 - INFO - 127.0.0.1 - - [08/Jun/2025 14:44:10] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:44:11,062 - INFO - 127.0.0.1 - - [08/Jun/2025 14:44:11] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:44:11,124 - INFO - 127.0.0.1 - - [08/Jun/2025 14:44:11] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:02,296 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:02] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:02,611 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:02] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:02,611 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:02] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:02,932 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:02] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:08,403 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:08] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:08,409 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:08] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:08,664 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:08] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:08,719 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:08] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:36,172 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:36] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:36,475 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:36] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:45:36,475 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:36] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 14:45:36,801 - INFO - 127.0.0.1 - - [08/Jun/2025 14:45:36] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 14:56:00,036 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-08 14:56:06,885 - INFO -  * Restarting with stat
+2025-06-08 14:56:12,088 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 14:56:12,138 - WARNING -  * Debugger is active!
+2025-06-08 14:56:12,138 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 15:11:20,932 - INFO - 127.0.0.1 - - [08/Jun/2025 15:11:20] "POST /run-process HTTP/1.1" 200 -
+2025-06-08 15:28:20,508 - INFO - 127.0.0.1 - - [08/Jun/2025 15:28:20] "POST /run-process HTTP/1.1" 200 -
+2025-06-08 15:29:15,895 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\forecast_processor.py', reloading
+2025-06-08 15:29:22,230 - INFO -  * Restarting with stat
+2025-06-08 15:29:26,851 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 15:29:26,884 - WARNING -  * Debugger is active!
+2025-06-08 15:29:26,885 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 15:29:33,972 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-08 15:29:34,092 - INFO -  * Restarting with stat
+2025-06-08 15:29:35,560 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 15:29:35,587 - WARNING -  * Debugger is active!
+2025-06-08 15:29:35,594 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 15:30:33,103 - INFO - 127.0.0.1 - - [08/Jun/2025 15:30:33] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 15:30:33,103 - INFO - 127.0.0.1 - - [08/Jun/2025 15:30:33] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:30:33,346 - INFO - 127.0.0.1 - - [08/Jun/2025 15:30:33] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 15:30:33,408 - INFO - 127.0.0.1 - - [08/Jun/2025 15:30:33] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:34:23,980 - INFO - 127.0.0.1 - - [08/Jun/2025 15:34:23] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:34:23,980 - INFO - 127.0.0.1 - - [08/Jun/2025 15:34:23] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 15:34:24,247 - INFO - 127.0.0.1 - - [08/Jun/2025 15:34:24] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:34:24,291 - INFO - 127.0.0.1 - - [08/Jun/2025 15:34:24] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 15:37:21,241 - INFO -  * Detected change in 'C:\\AutoReportV2\\backend\\app\\utils\\week_to_friday.py', reloading
+2025-06-08 15:37:21,377 - INFO -  * Restarting with stat
+2025-06-08 15:41:01,295 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 15:41:01,369 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-08 15:41:01,369 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 15:41:01,373 - INFO -  * Restarting with stat
+2025-06-08 15:41:02,888 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 15:41:02,910 - WARNING -  * Debugger is active!
+2025-06-08 15:41:02,919 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 15:57:50,009 - INFO - 127.0.0.1 - - [08/Jun/2025 15:57:50] "POST /run-process HTTP/1.1" 200 -
+2025-06-08 15:58:48,567 - INFO - 127.0.0.1 - - [08/Jun/2025 15:58:48] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:58:48,593 - INFO - 127.0.0.1 - - [08/Jun/2025 15:58:48] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 15:58:48,822 - INFO - 127.0.0.1 - - [08/Jun/2025 15:58:48] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 15:58:48,876 - INFO - 127.0.0.1 - - [08/Jun/2025 15:58:48] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:01:02,064 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:01:02,080 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:01:02,325 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:01:02,394 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/resultado HTTP/1.1" 200 -
