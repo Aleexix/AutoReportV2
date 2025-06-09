@@ -5531,3 +5531,51 @@ IndexError: index 13 is out of bounds for axis 0 with size 11
 2025-06-08 16:01:02,080 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/resultado HTTP/1.1" 200 -
 2025-06-08 16:01:02,325 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/summary HTTP/1.1" 200 -
 2025-06-08 16:01:02,394 - INFO - 127.0.0.1 - - [08/Jun/2025 16:01:02] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:03:24,110 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 16:03:24,180 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-08 16:03:24,180 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-08 16:03:24,195 - INFO -  * Restarting with stat
+2025-06-08 16:03:25,284 - INFO - Ruta de DOWNLOAD_FOLDER: C:\AutoReportV2\backend\temp
+2025-06-08 16:03:25,315 - WARNING -  * Debugger is active!
+2025-06-08 16:03:25,318 - INFO -  * Debugger PIN: 259-138-747
+2025-06-08 16:04:11,196 - INFO - 127.0.0.1 - - [08/Jun/2025 16:04:11] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:04:11,201 - INFO - 127.0.0.1 - - [08/Jun/2025 16:04:11] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:04:11,454 - INFO - 127.0.0.1 - - [08/Jun/2025 16:04:11] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:04:11,511 - INFO - 127.0.0.1 - - [08/Jun/2025 16:04:11] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:35:13,230 - INFO - 127.0.0.1 - - [08/Jun/2025 16:35:13] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:35:13,237 - INFO - 127.0.0.1 - - [08/Jun/2025 16:35:13] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 16:35:13,473 - INFO - 127.0.0.1 - - [08/Jun/2025 16:35:13] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 16:35:13,549 - INFO - 127.0.0.1 - - [08/Jun/2025 16:35:13] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:12:31,070 - INFO - 127.0.0.1 - - [08/Jun/2025 20:12:31] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:12:31,126 - INFO - 127.0.0.1 - - [08/Jun/2025 20:12:31] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:12:31,142 - INFO - 127.0.0.1 - - [08/Jun/2025 20:12:31] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:12:31,585 - INFO - 127.0.0.1 - - [08/Jun/2025 20:12:31] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:39:57,274 - INFO - 127.0.0.1 - - [08/Jun/2025 20:39:57] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:39:57,274 - INFO - 127.0.0.1 - - [08/Jun/2025 20:39:57] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:39:57,491 - INFO - 127.0.0.1 - - [08/Jun/2025 20:39:57] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:39:57,592 - INFO - 127.0.0.1 - - [08/Jun/2025 20:39:57] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:40:35,848 - INFO - 127.0.0.1 - - [08/Jun/2025 20:40:35] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:40:36,154 - INFO - 127.0.0.1 - - [08/Jun/2025 20:40:36] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 20:40:36,154 - INFO - 127.0.0.1 - - [08/Jun/2025 20:40:36] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 20:40:36,472 - INFO - 127.0.0.1 - - [08/Jun/2025 20:40:36] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 22:14:57,781 - INFO - 127.0.0.1 - - [08/Jun/2025 22:14:57] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 22:14:57,781 - INFO - 127.0.0.1 - - [08/Jun/2025 22:14:57] "GET /api/summary HTTP/1.1" 200 -
+2025-06-08 22:14:58,012 - INFO - 127.0.0.1 - - [08/Jun/2025 22:14:58] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-08 22:14:58,107 - INFO - 127.0.0.1 - - [08/Jun/2025 22:14:58] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:00:51,526 - INFO - 127.0.0.1 - - [09/Jun/2025 08:00:51] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:00:51,533 - INFO - 127.0.0.1 - - [09/Jun/2025 08:00:51] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:00:51,775 - INFO - 127.0.0.1 - - [09/Jun/2025 08:00:51] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:00:51,843 - INFO - 127.0.0.1 - - [09/Jun/2025 08:00:51] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:25:29,582 - INFO - 127.0.0.1 - - [09/Jun/2025 08:25:29] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:25:29,590 - INFO - 127.0.0.1 - - [09/Jun/2025 08:25:29] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:25:29,825 - INFO - 127.0.0.1 - - [09/Jun/2025 08:25:29] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:25:29,903 - INFO - 127.0.0.1 - - [09/Jun/2025 08:25:29] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:27:55,550 - INFO - 127.0.0.1 - - [09/Jun/2025 08:27:55] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:27:55,556 - INFO - 127.0.0.1 - - [09/Jun/2025 08:27:55] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:27:55,810 - INFO - 127.0.0.1 - - [09/Jun/2025 08:27:55] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:27:55,872 - INFO - 127.0.0.1 - - [09/Jun/2025 08:27:55] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:29:05,819 - INFO - 127.0.0.1 - - [09/Jun/2025 08:29:05] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:29:05,826 - INFO - 127.0.0.1 - - [09/Jun/2025 08:29:05] "GET /api/resultado HTTP/1.1" 200 -
+2025-06-09 08:29:06,078 - INFO - 127.0.0.1 - - [09/Jun/2025 08:29:06] "GET /api/summary HTTP/1.1" 200 -
+2025-06-09 08:29:06,143 - INFO - 127.0.0.1 - - [09/Jun/2025 08:29:06] "GET /api/resultado HTTP/1.1" 200 -
