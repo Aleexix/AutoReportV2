@@ -32,11 +32,12 @@ const Footer = () => {
                         <li className="hover:text-blueI"><a href="/contactanos">{language === 'es' ? 'Ayuda':'Help'}</a></li>
                         <li className="hover:text-blueI"><a href="/sobre nosotros">{language === 'es' ? 'Nosotros':'About'}</a></li>
                         <li className="hover:text-blueI"><a href="/">{language === 'es' ? 'Tu reporte':'your report'}</a></li>
+                        <li className="hover:text-blueI"><a href="/">{language === 'es' ? 'Budget':'Budget'}</a></li>
                     </ul>
                 </div>
                 {/* Derechos de autor */}
                 <div className={`mt-6 text-center ${darkMode ? ' text-gray-600 ': ' text-gray-400'}`}>    
-                    {language === 'es' ? 'AutoReport Copyright © 2025 AutoReport - Todos los derechos reservados || Diseñado por: Alexix.O':'AutoReport Copyright © 2025 AutoReport - All rights reserved || Designed by: Alexix. OR'}
+                    {language === 'es' ? 'AutoReport Copyright © 2025 AutoReport - Todos los derechos reservados || Diseñado por: Jhon.C y Alexix.O':'AutoReport Copyright © 2025 AutoReport - All rights reserved || Designed by: Jhon.C y Alexix. OR'}
                 </div>
             </div>
         </footer>
